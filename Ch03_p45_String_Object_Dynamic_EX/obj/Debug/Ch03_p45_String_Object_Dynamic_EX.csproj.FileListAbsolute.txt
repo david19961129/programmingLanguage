@@ -1,7 +1,0 @@
-C:\CS\CS2024A\Ch03_p45_String_Object_Dynamic_EX\obj\Debug\Ch03_p45_String_Object_Dynamic_EX.csproj.AssemblyReference.cache
-C:\CS\CS2024A\Ch03_p45_String_Object_Dynamic_EX\obj\Debug\Ch03_p45_String_Object_Dynamic_EX.csproj.CoreCompileInputs.cache
-C:\CS\CS2024A\Ch03_p45_String_Object_Dynamic_EX\bin\Debug\Ch03_p45_String_Object_Dynamic_EX.exe.config
-C:\CS\CS2024A\Ch03_p45_String_Object_Dynamic_EX\bin\Debug\Ch03_p45_String_Object_Dynamic_EX.exe
-C:\CS\CS2024A\Ch03_p45_String_Object_Dynamic_EX\bin\Debug\Ch03_p45_String_Object_Dynamic_EX.pdb
-C:\CS\CS2024A\Ch03_p45_String_Object_Dynamic_EX\obj\Debug\Ch03_p45_String_Object_Dynamic_EX.exe
-C:\CS\CS2024A\Ch03_p45_String_Object_Dynamic_EX\obj\Debug\Ch03_p45_String_Object_Dynamic_EX.pdb
