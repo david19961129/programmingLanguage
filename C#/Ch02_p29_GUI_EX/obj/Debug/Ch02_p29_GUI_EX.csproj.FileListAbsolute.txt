@@ -1,0 +1,10 @@
+C:\CS\CS2024A\Ch02_p29_GUI_EX\bin\Debug\Ch02_p29_GUI_EX.exe.config
+C:\CS\CS2024A\Ch02_p29_GUI_EX\bin\Debug\Ch02_p29_GUI_EX.exe
+C:\CS\CS2024A\Ch02_p29_GUI_EX\bin\Debug\Ch02_p29_GUI_EX.pdb
+C:\CS\CS2024A\Ch02_p29_GUI_EX\obj\Debug\Ch02_p29_GUI_EX.csproj.AssemblyReference.cache
+C:\CS\CS2024A\Ch02_p29_GUI_EX\obj\Debug\Ch02_p29_GUI_EX.Properties.Resources.resources
+C:\CS\CS2024A\Ch02_p29_GUI_EX\obj\Debug\Ch02_p29_GUI_EX.csproj.GenerateResource.cache
+C:\CS\CS2024A\Ch02_p29_GUI_EX\obj\Debug\Ch02_p29_GUI_EX.csproj.CoreCompileInputs.cache
+C:\CS\CS2024A\Ch02_p29_GUI_EX\obj\Debug\Ch02_p29_GUI_EX.exe
+C:\CS\CS2024A\Ch02_p29_GUI_EX\obj\Debug\Ch02_p29_GUI_EX.pdb
+C:\CS\CS2024A\Ch02_p29_GUI_EX\obj\Debug\Ch02_p29_GUI_EX.Form1.resources

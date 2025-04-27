@@ -1,0 +1,7 @@
+C:\CS\CS2024A\Ch01_introduction_Self\bin\Debug\Ch01_introduction_Self.exe.config
+C:\CS\CS2024A\Ch01_introduction_Self\bin\Debug\Ch01_introduction_Self.exe
+C:\CS\CS2024A\Ch01_introduction_Self\bin\Debug\Ch01_introduction_Self.pdb
+C:\CS\CS2024A\Ch01_introduction_Self\obj\Debug\Ch01_introduction_Self.csproj.AssemblyReference.cache
+C:\CS\CS2024A\Ch01_introduction_Self\obj\Debug\Ch01_introduction_Self.csproj.CoreCompileInputs.cache
+C:\CS\CS2024A\Ch01_introduction_Self\obj\Debug\Ch01_introduction_Self.exe
+C:\CS\CS2024A\Ch01_introduction_Self\obj\Debug\Ch01_introduction_Self.pdb

@@ -1,0 +1,7 @@
+C:\CS\CS2024A\Ch01_Test\bin\Debug\Ch01_Test.exe.config
+C:\CS\CS2024A\Ch01_Test\bin\Debug\Ch01_Test.exe
+C:\CS\CS2024A\Ch01_Test\bin\Debug\Ch01_Test.pdb
+C:\CS\CS2024A\Ch01_Test\obj\Debug\Ch01_Test.csproj.AssemblyReference.cache
+C:\CS\CS2024A\Ch01_Test\obj\Debug\Ch01_Test.csproj.CoreCompileInputs.cache
+C:\CS\CS2024A\Ch01_Test\obj\Debug\Ch01_Test.exe
+C:\CS\CS2024A\Ch01_Test\obj\Debug\Ch01_Test.pdb
