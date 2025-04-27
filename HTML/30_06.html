@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>學習</title>
+
+    <style>
+    .flex-container{
+        /*flex-wrap預設值nowrap不換行*/
+        display:flex;
+        height: 600px;
+        flex-wrap:wrap;
+        /*flex-wrap:只能 wra只能 wrap nowrap*/
+        /*flex-flow:row wrap;*/
+        /*flex-wrap:row-reverse wrap-reverse;
+        justify-content: stretch;
+        justify-content: center;
+        justify-content: flex-start;
+        justify-content: flex-end;
+        justify-content: space-around;
+        justify-content: space-between;*/
+
+        align-content: stretch;
+        align-content: center;
+        align-content: flex-start;
+        align-content: flex-end;
+        align-content: space-around;
+        align-content: space-between;
+
+        background-color:blue;
+    }
+    .flex-container>div{
+        background-color: aquamarine;
+        width: 100px;
+        margin: 10px;
+        text-align: center;
+        line-height: 75px;
+        font-size: 30px;
+    }
+    </style>
+<head>
+</head>
+<body>
+    <img src="images/measure.png">
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+        <div>16</div>
+    </div>
+</body>
+</html>

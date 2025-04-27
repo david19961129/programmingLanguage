@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>練習</title>
+    <style>
+        li{
+            list-style: decimal;
+        }
+
+        body,
+        .b{
+            counter-reset: c ;
+        }
+
+        .a::before{
+            content: counters(c, ".") ":";
+            counter-increment: c;
+        }
+
+        div{
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS 基本語法<h1>
+    <h2>伪元素</h2>
+    <div class="a">第一層
+        <div class="b">
+          <div class="a">第二層
+            <div class="b">
+              <div class="a">第三層</div>
+              <div class="a">第三層</div>
+              <div class="a">第三層</div>
+            </div>
+          </div>
+          <div class="a">第二層</div>
+          <div class="a">第二層</div>
+        </div>
+      </div>
+      <div class="a">第一層
+        <div class="b">
+          <div class="a">第二層</div>
+          <div class="a">第二層</div>
+        </div>
+      </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<head>
+    <title>學JavaScript</title>
+</head>
+  
+<body>
+    <h1>JavaScript Numbers</h1>
+    <h2>Integer Precision</h2>
+    <p>超過15位</p>
+    <p id="demo"></p>
+
+    <script>
+        let x=999999999999999;
+        console.log("x="+x)
+        let y=9999999999999999;
+        console.log("y="+y)
+        let z=9999999999999999n;
+        console.log("z="+z)
+        document.getElementById("demo").innerHTML=x+"<br>"+y;
+    </script>
+</body>

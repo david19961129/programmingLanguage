@@ -1,0 +1,26 @@
+<head>
+    <title>學JavaScript</title>
+  </head>
+  
+  <body>
+    <p>將華氏度轉換為攝氏度</p></p>
+    <p id="demo"></p>
+
+      <script>
+        /* 將華氏度轉換為攝氏度 */
+        function toCelsius(f) {
+          return (5 / 9) * (f - 32);
+        }
+        
+
+        /*let value= toCelsius(50);
+        console.log(toCelsius(50));
+        console.log(typeof(toCelsius));
+        console.log(typeof(toCelsius(50)));*/
+        let value= toCelsius("a");
+        console.log(toCelsius("a"));
+        console.log(typeof(toCelsius("a")));
+        document.getElementById("demo").innerHTML=value;
+      </script>
+  </body>
+  </html>

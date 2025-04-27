@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>學習</title>
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }/*讓物件只往內部放*/
+
+        .img-container{
+            float: left;
+            width: 33.33%;
+            padding: 5px;
+            height: 300px;
+            border: 1px solid;
+        }
+
+        img{
+            width: 100%;
+        }
+
+        .clearfix::after{
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+<body>
+    <div class="clearfix">
+        <div class="img-container">
+            <img src="images/meme03.jpg">
+        </div>
+        <div class="img-container">
+            <img src="images/meme03.jpg">
+        </div>
+        <div class="img-container">
+            <img src="images/meme03.jpg">
+        </div>
+    </div>
+</body>
+</html>

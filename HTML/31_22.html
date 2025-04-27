@@ -1,0 +1,75 @@
+<head>
+    <title>學JavaScript</title>
+</head>
+  
+<body>
+    <div>
+        <input type="text" id ="num1" placeholder="輸入第一個數字">
+        <input type="text" id ="num2" placeholder="輸入第二個數字">
+    </div>
+    <div>
+        <button onclick="calculate('+')">+</button>
+        <button onclick="calculate('-')">-</button>
+        <button onclick="calculate('*')">*</button>
+        <button onclick="calculate('/')">/</button>
+        <!-- -->
+        <button onclick="calculate('%')">%</button>
+        <button onclick="calculate('**')">**</button>
+        <!-- -->
+        <br/>
+        <button onclick="calculate('<<')">&lt;&lt;</button>
+        <button onclick="calculate('>>')"> >> </button>
+        <button style="visibility: hidden;"onclick="calculate('=')">=</button>
+    </div>
+    <div>
+        <input type="text" id="answer" placeholder="計算結果" readonly>
+    </div>
+    <script>
+        function calculate(operator){
+
+            const num1= parseFloat(document.getElementById('num1').value);
+            const num2= parseFloat(document.getElementById('num2').value);
+            let result;
+
+            console.log(operator);
+            switch(operator){
+                case '+':
+                    result=num1+num2;
+                    break;
+
+                case '-':
+                    result=num1-num2;
+                    break;
+
+                case '*':
+                    result=num1*num2;
+                    break;
+
+                case '/':
+                    result=num1/num2;
+                    break;
+
+                case '%':
+                    result=num1%num2;
+                    break;
+
+                case '**':
+                    result=num1**num2;
+                    break;
+
+                case '<<':
+                    result=num1<<num2;
+                    break;
+
+                case '>>':
+                    result=num1>>num2;
+                    break;
+
+                default:
+                    result='Invalid Operator';
+            }
+            document.getElementById('answer').value=result;
+        }
+    </script>
+</body>
+</html>

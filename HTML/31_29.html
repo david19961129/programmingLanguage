@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript 字串方法</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JavaScript 字串方法</h1>
+    <table>
+        <tr>
+            <th>方法</th>
+            <th>說明</th>
+            <th>範例 str = "Hello, AO!"</th>
+            <th>結果</th>
+        </tr>
+        <tr>
+            <td>charAt(index)</td>
+            <td>返回指定索引位置的字元</td>
+            <td>str.charAt(2)</td>
+            <td id="charAtResult"></td>
+        </tr>
+        <tr>
+            <td>charCodeAt(index)</td>
+            <td>返回指定索引位置的字元的 Unicode 編碼</td>
+            <td>str.charCodeAt(0)</td>
+            <td id="charCodeAtResult"></td>
+        </tr>
+        <tr>
+            <td>length</td>
+            <td>返回字串的長度</td>
+            <td>str.length</td>
+            <td id="lengthResult"></td>
+        </tr>
+        <tr>
+            <td>slice(startIndex, endIndex)</td>
+            <td>提取字串的一部分並返回新的字串</td>
+            <td>str.slice(7, 12)</td>
+            <td id="sliceResult"></td>
+        </tr>
+        <tr>
+            <td>toLowerCase()</td>
+            <td>將字串轉換為小寫</td>
+            <td>str.toLowerCase()</td>
+            <td id="toLowerCaseResult"></td>
+        </tr>
+        <tr>
+            <td>toUpperCase()</td>
+            <td>將字串轉換為大寫</td>
+            <td>str.toUpperCase()</td>
+            <td id="toUpperCaseResult"></td>
+        </tr>
+        <tr>
+            <td>concat(str1, str2, ...)</td>
+            <td>連接多個字串並返回新的字串</td>
+            <td>str.concat(" ", "World!")</td>
+            <td id="concatResult"></td>
+        </tr>
+        <tr>
+            <td>indexOf(searchValue, startIndex)</td>
+            <td>返回指定字串第一次出現的索引位置</td>
+            <td>str.indexOf("AO")</td>
+            <td id="indexOfResult"></td>
+        </tr>
+        <tr>
+            <td>lastIndexOf(searchValue, startIndex)</td>
+            <td>返回指定字串最後一次出現的索引位置</td>
+            <td>str.lastIndexOf("o")</td>
+            <td id="lastIndexOfResult"></td>
+        </tr>
+        <tr>
+            <td>startsWith(searchValue, startIndex)</td>
+            <td>判斷字串是否以指定字串開頭</td>
+            <td>str.startsWith("Hello")</td>
+            <td id="startsWithResult"></td>
+        </tr>
+        <tr>
+            <td>endsWith(searchValue, length)</td>
+            <td>判斷字串是否以指定字串結尾</td>
+            <td>str.endsWith("!")</td>
+            <td id="endsWithResult"></td>
+        </tr>
+        <tr>
+            <td>includes(searchValue, startIndex)</td>
+            <td>判斷字串是否包含指定字串</td>
+            <td>str.includes("AO")</td>
+            <td id="includesResult"></td>
+        </tr>
+        <tr>
+            <td>replace(searchValue, replaceValue)</td>
+            <td>替換字串中的指定內容</td>
+            <td>str.replace("AO", "World")</td>
+            <td id="replaceResult"></td>
+        </tr>
+        <tr>
+            <td>split(separator, limit)</td>
+            <td>將字串分割成數組</td>
+            <td>str.split(",")</td>
+            <td id="splitResult"></td>
+        </tr>
+        <tr>
+            <td>substring(startIndex, endIndex)</td>
+            <td>提取兩個索引之間的字串</td>
+            <td>str.substring(1, 5)</td>
+            <td id="substringResult"></td>
+        </tr>
+        <tr>
+            <td>substr(startIndex, length)</td>
+            <td>提取從起始索引開始的指定數量的字元</td>
+            <td>str.substr(1, 4)</td>
+            <td id="substrResult"></td>
+        </tr>
+        <tr>
+            <td>trim()</td>
+            <td>去除字串兩端的空格</td>
+            <td>' Hello, AO! '.trim()</td>
+            <td id="trimResult"></td>
+        </tr>
+        <tr>
+            <td>repeat(count)</td>
+            <td>返回指定次數重複的字串</td>
+            <td>str.repeat(2)</td>
+            <td id="repeatResult"></td>
+        </tr>
+        <tr>
+            <td>padStart(targetLength, padString)</td>
+            <td>在字串開頭填充指定的字元，直到達到目標長度</td>
+            <td>str.padStart(15, '*')</td>
+            <td id="padStartResult"></td>
+        </tr>
+        <tr>
+            <td>padEnd(targetLength, padString)</td>
+            <td>在字串結尾填充指定的字元，直到達到目標長度</td>
+            <td>str.padEnd(15, '!')</td>
+            <td id="padEndResult"></td>
+        </tr>
+        <tr>
+            <td>match(regex)</td>
+            <td>返回正則表達式匹配的結果數組</td>
+            <td>str.match(/o/g)</td>
+            <td id="matchResult"></td>
+        </tr>
+        <tr>
+            <td>search(regex)</td>
+            <td>返回正則表達式匹配的索引</td>
+            <td>str.search(/AO/)</td>
+            <td id="searchResult"></td>
+        </tr>
+        <tr>
+            <td>toString()</td>
+            <td>返回字串的原始表示</td>
+            <td>str.toString()</td>
+            <td id="toStringResult"></td>
+        </tr>
+        <tr>
+            <td>valueOf()</td>
+            <td>返回字串對象的原始值</td>
+            <td>str.valueOf()</td>
+            <td id="valueOfResult"></td>
+        </tr>
+    </table>
+
+    <script>
+        var str = "Hello, AO!";
+
+        document.getElementById("charAtResult").textContent = str.charAt(2);
+        document.getElementById("charCodeAtResult").textContent = str.charCodeAt(0);
+        document.getElementById("lengthResult").textContent = str.length;
+        document.getElementById("sliceResult").textContent = str.slice(7, 12);
+        document.getElementById("toLowerCaseResult").textContent = str.toLowerCase();
+        document.getElementById("toUpperCaseResult").textContent = str.toUpperCase();
+        document.getElementById("concatResult").textContent = str.concat(" ", "World!");
+        document.getElementById("indexOfResult").textContent = str.indexOf("AO");
+        document.getElementById("lastIndexOfResult").textContent = str.lastIndexOf("o");
+        document.getElementById("startsWithResult").textContent = str.startsWith("Hello");
+        document.getElementById("endsWithResult").textContent = str.endsWith("!");
+        document.getElementById("includesResult").textContent = str.includes("AO");
+        document.getElementById("replaceResult").textContent = str.replace("AO", "World");
+        document.getElementById("splitResult").textContent = str.split(",").join(" | ");
+        document.getElementById("substringResult").textContent = str.substring(1, 5);
+        document.getElementById("substrResult").textContent = str.substr(1, 4);
+        document.getElementById("trimResult").textContent = '  Hello, AO!  '.trim();
+        document.getElementById("repeatResult").textContent = str.repeat(2);
+        document.getElementById("padStartResult").textContent = str.padStart(15, '*');
+        document.getElementById("padEndResult").textContent = str.padEnd(15, '!');
+        document.getElementById("matchResult").textContent = str.match(/o/g).join(", ");
+        document.getElementById("searchResult").textContent = str.search(/AO/);
+        document.getElementById("toStringResult").textContent = str.toString();
+        document.getElementById("valueOfResult").textContent = str.valueOf();
+    </script>
+</body>
+
+</html>

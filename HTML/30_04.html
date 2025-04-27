@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>學習</title>
+<head>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .box{
+            float: left;
+            width: 33.33%;
+            padding: 50px;
+        }
+        .clearfix::after{
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+<body>
+      <div class="box clearfix" style="background-color: aqua;">div 1</div>
+      <div class="box clearfix" style="background-color: rgb(50, 245, 245);">div 2</div>
+      <div class="box clearfix" style="background-color: rgb(59, 238, 238);">div 3</div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>和AO老師快樂學JavaScript</title>
+  <script>
+    // ...
+    alert('aaa');
+    document.getElementById("demo").innerHTML = "Hello AAA";
+  </script>
+  <script>
+    window.onload = function () {
+      alert('ddd');
+      document.getElementById("demo").innerHTML = "Hello DDD";
+    };
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      alert('ccc');
+      document.getElementById("demo").innerHTML = "Hello CCC";
+    });
+  </script>
+
+</head>
+
+<body>
+  <div id="demo">Hello Frank</div>
+  <script>
+    // ...
+    alert('bbb');
+    document.getElementById("demo").innerHTML = "Hello BBB";
+  </script>
+</body>
+
+</html>

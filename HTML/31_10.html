@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>學JavaScript</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <script>
+        const cars=["Saab","Volvo","BMW"];
+        console.log(cars);
+        cars[0]="Toyota";
+        console.log(cars);
+        cars.push("Audi");
+        console.log(cars);
+        console.log("陣列不能全部重新被定義")
+        document.getElementById("demo").innerHTML=cars;
+        document.getElementById("demo").innerHTML=cars;
+        /*可以不使用const宣告陣列在試 
+        /cars =["toyota","volvo","audi"];
+        console.log(cars);*/
+        console.log("陣列不能全部重新被定義")
+    </script>
+</body>
+
+</html>

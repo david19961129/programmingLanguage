@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>練習</title>
+    <style>
+        div{
+            counter-reset: num  numi 2 numb 5;
+        }
+
+        span,
+        i,
+        b{
+            display:block;
+        }
+
+        span::before{
+            counter-increment: num ;
+            content: counter(num) '. ';
+        }
+
+        i::before{
+            counter-increment: num 2;
+            content: counter(num) '. ';
+        }
+
+        b::before{
+            counter-increment: num 5;
+            content: counter(num) '. ';
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS 基本語法<h1>
+    <h2>伪元素</h2>
+<div>
+    <span>鋼鐵人</span>
+    <span>美國隊長</span>
+    <span>雷神索爾</span>
+    <i>神盾局</i>
+    <i>神鬼局</i>
+    <i>神經局</i>
+    <b>九頭蛇</b>
+    <b>九頭牛</b>
+    <b>九頭豬</b>
+</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>練習</title>
+    <style>
+        div{
+            counter-reset: num 3;
+        }
+
+        span{
+            display:block;
+        }
+
+        span::before{
+            counter-increment: num 2;
+            content: counter(num) '. ';
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS 基本語法<h1>
+    <h2>伪元素</h2>
+    <div>
+        <span>鋼鐵人</span>
+        <span>美國隊長</span>
+        <span>雷神索爾</span>
+    </div>
+</body>
+</html>

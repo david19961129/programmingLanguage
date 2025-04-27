@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>學習</title>
+ <style>
+    .flex-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+        background-color: dodgerblue;
+    }
+    .flex-container>div{
+        background-color: yellow;
+        color: black;
+        width: 100px;
+        margin:10px;
+        text-align: center;
+        line-height: 75px;
+        font-size: 30px;
+    }
+
+    .item{
+        align-self: stretch;
+        align-self: center;
+        align-self: baseline;
+        align-self: flex-end;
+        align-self: flex-start;
+    }
+ </style>
+<head></head>
+<body>
+    <div class="flex-container">
+        <!--<div style="order: 1;">1</div>
+        <div style="order: 3;">2</div>
+        <div style="order: 4;">3</div>
+        <div style="order: 2;">4</div>
+        <div style="flex-grow: 0;">A</div>
+        <div style="flex-grow: 1;">B</div>
+        <div style="flex-grow: 2;">C</div>-->
+        <div>1</div>
+        <div>2</div>
+        <div style="flex:0 0 400px;">3</div>
+        <div>4</div>
+        <div style="flex-shrink: 0;">5</div>
+        <div>6</div>
+        <div>7</div>
+        <div class="item">8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>學習</title>
+ <style>
+    .flex-container{
+        display: flex;
+        flex-direction: row;
+        font-size: 30px;
+        text-align: center;
+    }
+    .flex-tiem-left{
+        background-color: yellow;
+        padding: 10px;
+        flex: 25%;
+    }
+
+    .flex-tiem-right{
+        background-color: blue;
+        padding: 10px;
+        flex: 75%;
+    }
+
+    @media(max-witdth:600px){
+        .flex-container{
+            flex-direction: column;
+        }
+    }
+ </style>
+<head></head>
+<body>
+    <img src="images/measure.png">
+    <div class="flex-container">
+        <div class="flex-tiem-left">1</div>
+        <div class="flex-tiem-right">2</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>學JavaScript</title>
+</head>
+
+<body>
+    <script>
+        a=4;
+        console.log("a="+a);
+        
+        var x=5;
+        console.log("var x="+x);
+
+        let y=6;
+        console.log("let y="+y);
+
+        const z =7;
+        console.log("const z="+z);
+
+        a=8;
+        console.log("Modifying a=8"+a);
+
+        x=9;
+        console.log("Modifying x=9"+x);
+
+        y=10;
+        console.log("Modifying y=10"+a);
+
+        console.log("Modifying z(無法Modifying):"+z);
+
+        function exampleFunction(){
+            var x=11;
+            let y=12;
+            const z=13;
+            a=14;
+            console.log("Function a:"+a);
+            console.log("Function x:"+x);
+            console.log("Function y:"+y);
+            console.log("Function z:"+z);
+        }
+
+        exampleFunction();
+        console.log("function後a:"+a);
+        console.log("function後x:"+x);
+        console.log("function後y:"+y);
+        console.log("function後z:"+z);
+
+        a=7;
+        var a =7;
+        console.log("重新定義a:"+a);
+        var x =1;
+        console.log("重新定義x:"+x);
+        //let y =2;
+        console.log("重新定義y(無法重新定義):"+y);
+        //const z=3;
+        console.log("重新定義z(無法重新定義):"+z);
+    </script>
+</body>
+
+</html>

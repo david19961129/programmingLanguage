@@ -1,0 +1,28 @@
+<head>
+    <title>學JavaScript</title>
+</head>
+  
+<body>
+
+    <p id="demo"></p>
+
+    <script>
+        let text ="Apple, Banana, Kiwi";
+        let part =text.slice(7,13);
+
+        document.getElementById("demo").innerHTML =part;
+
+        console.log("text:" + text);
+        console.log("slice(7,13):"+ text.slice(7,13));
+        console.log("slice(7):"+ text.slice(7));
+        console.log("slice(-12):"+ text.slice(-12));
+        console.log("slice(-12,-6):"+ text.slice(-12,-6));
+
+        console.log("substring(7,13):" + text.substring(7,13));
+
+        console.log("substr(7,6):" + text.substr(7,6));
+        console.log("substr(7):" + text.substr(7));
+        console.log("substr(-4):" + text.substr(-4));
+    </script>
+</body>
+</html>
