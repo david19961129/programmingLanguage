@@ -1,0 +1,7 @@
+C:\CS\CS2024A\Ch03_P49_Escape_Char_EX\bin\Debug\Ch03_P49_Escape_Char_EX.exe.config
+C:\CS\CS2024A\Ch03_P49_Escape_Char_EX\bin\Debug\Ch03_P49_Escape_Char_EX.exe
+C:\CS\CS2024A\Ch03_P49_Escape_Char_EX\bin\Debug\Ch03_P49_Escape_Char_EX.pdb
+C:\CS\CS2024A\Ch03_P49_Escape_Char_EX\obj\Debug\Ch03_P49_Escape_Char_EX.csproj.AssemblyReference.cache
+C:\CS\CS2024A\Ch03_P49_Escape_Char_EX\obj\Debug\Ch03_P49_Escape_Char_EX.csproj.CoreCompileInputs.cache
+C:\CS\CS2024A\Ch03_P49_Escape_Char_EX\obj\Debug\Ch03_P49_Escape_Char_EX.exe
+C:\CS\CS2024A\Ch03_P49_Escape_Char_EX\obj\Debug\Ch03_P49_Escape_Char_EX.pdb
