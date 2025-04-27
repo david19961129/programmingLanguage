@@ -1,0 +1,7 @@
+C:\CS\CS2024A\Ch03_P44\obj\Debug\Ch03_P44.csproj.AssemblyReference.cache
+C:\CS\CS2024A\Ch03_P44\obj\Debug\Ch03_P44.csproj.CoreCompileInputs.cache
+C:\CS\CS2024A\Ch03_P44\bin\Debug\Ch03_P44.exe.config
+C:\CS\CS2024A\Ch03_P44\bin\Debug\Ch03_P44.exe
+C:\CS\CS2024A\Ch03_P44\bin\Debug\Ch03_P44.pdb
+C:\CS\CS2024A\Ch03_P44\obj\Debug\Ch03_P44.exe
+C:\CS\CS2024A\Ch03_P44\obj\Debug\Ch03_P44.pdb
