@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>onclick</title>
+</head>
+
+<body>
+    <button onclick="confirm('你是學生嗎?');">開啟警告視窗</button>
+    <h2 onclick="confirm('你是學生嗎?');">開啟警告視窗</h2>
+    <hr/>
+    <img src="images/mr.b.jpg" width="200px" onmouseover="alert('移開你的手')";>
+    <hr/>
+    <button onclick="confirm('你是學生嗎?')? alert('學生要好好學習'): alert('不是學生也要好好學習');">開啟警告視窗</button>
+    <h2 onclick="confirm('你是學生嗎?')? alert('學生要好好學習'): alert('不是學生也要好好學習');">開啟警告視窗</h2>
+    <hr/>
+    <button onclick="myFunction();">使用JS開啟警告視窗</button>
+    <h2 onclick="myFunction();">使用JS開啟警告視窗</h2>
+</body>
+<script>
+    var myFunction =function(){
+        let answer=confirm('你是學生嗎?');
+        if(answer){
+            alert('學生要好好學習')}
+        else{
+            alert('不是學生也要好好學習');
+        }
+    }
+</script>
+</html>

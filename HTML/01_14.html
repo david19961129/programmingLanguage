@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accesskey 表單範例</title>
+</head>
+<body>
+    <h2>使用 Accesskey 的表單範例</h2>
+
+    <form>
+        <!-- 姓名輸入框 -->
+        <label for="name">姓名 (按 Alt + N 聚焦):</label>
+        <input type="text" id="name" name="name" accesskey="n">
+        <br><br>
+
+        <!-- 電子郵件輸入框 -->
+        <label for="email">電子郵件 (按 Alt + E 聚焦):</label>
+        <input type="email" id="email" name="email" accesskey="e">
+        <br><br>
+
+        <!-- 密碼輸入框 -->
+        <label for="password">密碼 (按 Alt + P 聚焦):</label>
+        <input type="password" id="password" name="password" accesskey="p">
+        <br><br>
+
+        <!-- 提交按鈕 -->
+        <button type="submit" accesskey="s">提交 (按 Alt + S 提交)</button>
+    </form>
+
+    <p>提示：在 Windows 系統上，按住 <strong>Alt</strong> 鍵並按相應的快捷鍵（如 N, E, P, S）來快速聚焦到對應的表單元素。</p>
+    <p>在 Mac 系統上，通常需要使用 <strong>Control</strong> 鍵來代替 Alt 鍵。</p>
+</body>
+</html>

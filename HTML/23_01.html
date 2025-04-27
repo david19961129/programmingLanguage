@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!DOCTYPE html>
+    <html lang="zh-TW">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Display 屬性範例</title>
+        <style>
+            .none {
+                display: none;
+            }
+    
+            .contents {
+                display: contents;
+            }
+    
+            .block {
+                display: block;
+                background-color: lightblue;
+                margin: 10px 0;
+                width: 100px;
+                height: 100px;
+            }
+    
+            .inline {
+                display: inline;
+                background-color: lightgreen;
+                /*沒作用
+                width: 100px;
+                height: 100px; */
+            }
+    
+            .inline-block {
+                display: inline-block;
+                background-color: lightcoral;
+                padding: 10px;
+                /* width: 100px;
+                height: 100px */
+            }
+    
+            .inline-table {
+                display: inline-table;
+                background-color: lightgoldenrodyellow;
+                border: 1px solid black;
+            }
+    
+            .list-item {
+                display: list-item;
+            }
+    
+            .table {
+                display: table;
+                border: 1px solid black;
+            }
+    
+            .flex {
+                display: flex;
+                background-color: lavender;
+                justify-content: space-around;
+            }
+    
+            .grid {
+                display: grid;
+                background-color: lightpink;
+                grid-template-columns: repeat(3, 1fr);
+            }
+    
+            .box {
+                padding: 10px;
+                margin: 5px;
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <h2>Display 屬性範例</h2>
+    
+        <div class="none">這個元素不會被顯示 (display: none)</div>
+    
+        <div class="contents">
+            <div class="box">這裡是使用 display: contents，只顯示內容，忽略元素外框</div>
+            <!-- <div class="box">這裡是使用 display: contents，只顯示內容，忽略元素外框</div> -->
+        </div>
+    
+        <div class="block">這是一個塊級元素 (display: block)</div>
+    
+        <span class="inline">這是一個行內元素 (display: inline)</span>
+        <span class="inline">另一個行內元素</span>
+    
+        <div class="inline-block">這是一個行內塊級元素 (display: inline-block)</div>
+        <div class="inline-block">另一個行內塊級元素</div>
+    
+        <div class="inline-table">
+            <table>
+                <tr>
+                    <td>行內表格元素 (display: inline-table)</td>
+                </tr>
+            </table>
+        </div>
+    
+        <ul>
+            <li class="list-item">這是一個清單項目 (display: list-item)</li>
+        </ul>
+    
+        <div class="table">
+            <table>
+                <tr>
+                    <td>這是一個表格元素 (display: table)</td>
+                </tr>
+            </table>
+        </div>
+    
+        <div class="flex">
+            <div class="box">彈性項目 1 (display: flex)</div>
+            <div class="box">彈性項目 2</div>
+            <div class="box">彈性項目 3</div>
+        </div>
+    
+        <div class="grid">
+            <div class="box">格狀項目 1 (display: grid)</div>
+            <div class="box">格狀項目 2</div>
+            <div class="box">格狀項目 3</div>
+        </div>
+    </body>
+    
+    </html>

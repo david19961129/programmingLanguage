@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>照片檔輸入</title>
+</head>
+
+<body>
+    <form action="http://127.0.0.1:5566/" method="post">
+        <!-- 接受 jpg 圖片文件 -->
+
+        <input type="file" accept=".jpg">
+
+        <!-- 使用者前鏡頭 -->
+
+        <input type="file" accept="image/*" capture="user">
+
+        <!-- 使用環境鏡頭進行錄影 -->
+
+        <input type="file" accept="video/*" capture="environment">
+
+</form>
+</body>
+</html>

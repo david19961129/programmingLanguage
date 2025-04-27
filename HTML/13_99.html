@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>和AO老師快樂學HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        #app {
+            margin-top: 50px;
+        }
+
+        div {
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: inline-block;
+            width: 40px;
+            text-align: left;
+        }
+
+        input[type="range"] {
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>RGB調色盤</h1>
+    <div id="app"></div>
+    <hr />
+    <img src="https://steam.oxxostudio.tw/webp/html/info/color-01.webp" />
+    <!-- 以下為javascript -->
+    <script>
+        // 在HTML中創建一個空的<div>元素，用於顯示所選顏色和RGB數值
+        const colorDisplay = document.createElement('div');
+        colorDisplay.style.width = '200px';
+        colorDisplay.style.height = '200px';
+        colorDisplay.style.marginBottom = '20px';
+
+        // 在HTML中創建一個空的<p>元素，用於顯示RGB數值
+        const rgbValuesDisplay = document.createElement('p');
+        rgbValuesDisplay.style.fontFamily = 'monospace';
+
+        // 創建RGB滑桿元素
+        const redSlider = createSlider('Red');
+        const greenSlider = createSlider('Green');
+        const blueSlider = createSlider('Blue');
+
+        // 將滑桿元素添加到網頁中
+        const app = document.getElementById('app');
+        app.appendChild(colorDisplay);
+        app.appendChild(rgbValuesDisplay);
+        app.appendChild(redSlider);
+        app.appendChild(greenSlider);
+        app.appendChild(blueSlider);
+
+        // 監聽滑桿變化事件，即時更新顏色和RGB數值
+        redSlider.addEventListener('input', updateColor);
+        greenSlider.addEventListener('input', updateColor);
+        blueSlider.addEventListener('input', updateColor);
+
+        // 創建RGB滑桿的輔助函式
+        function createSlider(color) {
+            const sliderContainer = document.createElement('div');
+            const label = document.createElement('label');
+            const slider = document.createElement('input');
+
+            label.textContent = color;
+            slider.type = 'range';
+            slider.min = '0';
+            slider.max = '255';
+            slider.value = '0';
+
+            sliderContainer.appendChild(label);
+            sliderContainer.appendChild(slider);
+
+            return sliderContainer;
+        }
+
+        // 更新顏色和RGB數值
+        function updateColor() {
+            const redValue = redSlider.querySelector('input').value;
+            const greenValue = greenSlider.querySelector('input').value;
+            const blueValue = blueSlider.querySelector('input').value;
+
+            const color = `rgb(${redValue}, ${greenValue}, ${blueValue})`;
+            colorDisplay.style.backgroundColor = color;
+
+            const rgbValues = `RGB: (${redValue}, ${greenValue}, ${blueValue})`;
+            rgbValuesDisplay.textContent = rgbValues;
+        }
+    </script>
+</body>
+
+</html>

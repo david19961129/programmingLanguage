@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>和AO老師快樂學HTML</title>
+    <style>
+        div+p{
+            background-color: yellow;
+        }
+
+        div~p{
+            color: red ;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>兄弟選擇器</h2>
+
+    <p>The descendant selector matches all elements </p>
+
+    <div>
+        <p>Paragrph 1 in the div.</p>
+        <div>
+            <p>Paragrph 1.1 in the div.</p>
+            <p>Paragrph 1.2 in the div.</p>
+        </div>
+        <p>Paragrph 2 in the div.</p>
+    </div>
+
+    <p>Paragrph 3.Not in a div.鄰近,通用</p>
+    <p>Paragrph 4.Not in a div.通用</p>
+
+    <div>
+        <p>Paragrph 5 in the div</p>
+        <p>Paragrph 6 in the div</p>
+    </div>
+</body>

@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <style>
+        /* 設定 div1 的樣式，包括寬度、高度、內邊距和邊框 */
+        #div1 {
+            width: 350px;
+            height: 350px;
+            padding: 10px;
+            border: 1px solid #aaaaaa;
+        }
+    </style>
+    <script>
+        /* 允許拖放 */
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        /* 當開始拖動時，設置數據傳輸的數據 */
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        /* 當元素被拖放到目標區域時，將其追加到目標 */
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+</head>
+<body>
+    <p>Drag the W3Schools image into the rectangle:</p>
+
+    <!-- 設置 div1 為拖放目標區域，並綁定 ondrop 和 ondragover 事件 -->
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <br>
+    
+    <!-- 設置可拖動的圖片，並綁定 ondragstart 事件 -->
+    <img id="drag1" src="image/Sleeping cat .jpg"  draggable="true" ondragstart="drag(event)" width="336" height="336">
+</body>
+</html>

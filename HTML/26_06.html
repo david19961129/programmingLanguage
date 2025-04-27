@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <p>Count numbers: <output id="result"></output></p>
+  <!-- 按鈕，點擊時調用 startWorker 函數 -->
+  <button onclick="startWorker()">Start Worker</button>
+  <!-- 按鈕，點擊時調用 stopWorker 函數 -->
+  <button onclick="stopWorker()">Stop Worker</button>
+
+  <script>
+    var w;
+
+    // 定義 startWorker 函數，這個函數會在點擊 "Start Worker" 按鈕時被調用
+    function startWorker() {
+      // 檢查瀏覽器是否支持 Web Workers
+      console.log('typeof (Worker):'+typeof (Worker));
+      if (typeof (Worker) !== "undefined") {
+        // 如果支持，且變量 w 未被定義，則創建一個新的 Worker
+        if (typeof (w) == "undefined") {
+          w = new Worker("demo_workers.js");
+        }
+        // 當 Worker 發送消息時，執行這個函數
+        w.onmessage = function (event) {
+          // 將消息內容顯示在 id 為 "result" 的元素中
+          document.getElementById("result").innerHTML = event.data;
+        };
+      } else {
+        // 如果不支持 Web Workers，顯示錯誤消息
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Workers...";
+      }
+    }
+
+    // 定義 stopWorker 函數，這個函數會在點擊 "Stop Worker" 按鈕時被調用
+    function stopWorker() {
+      // 終止 Worker
+      w.terminate();
+      // 將變量 w 設置為 undefined
+      w = undefined;
+    }
+  </script>
+</body>
+
+</html>

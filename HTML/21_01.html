@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML_影音</title>
+
+</head>
+
+<body>
+    <div style="text-align: center;">
+        <button onclick="playPause()">Play/Pause</button>
+        <button onclick="makeBig()">Big</button>
+        <button onclick="makeSmall()">small</button>
+        <button onclick="makeNomal()">Normal</button>
+        <br><br>
+        <video id="video1" width="420" controls loop poster="images/meme1.jpg">
+            <source src="mov_bbb.mp4" type="video/mp4">
+            <source src="mov_bbb.ogv" type="video/ogv">
+            Your browser does not support HTML video.
+        </video>
+    </div>
+</body>
+<script>
+    var myVdieo=document.getElementById("video1");
+
+    function playPause (){
+        if(myVdieo.paused)
+           myVdieo.play()
+        else
+            myVdieo.pause();
+    }
+
+    function makeBig (){
+        myVdieo.width=560;
+    }
+
+    function makeSmall (){
+        myVdieo.width=320;
+    }
+
+    function makeNomal (){
+        myVdieo.width=420;
+    }
+</script>
+</html>

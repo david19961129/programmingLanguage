@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>選填設定</title>
+</head>
+
+<body>
+    <form action="http://127.0.0.1:5566/" method="post">
+        <select name="s1">
+            <optgroup label="iPhone">
+                <option value="14p">iPhone 14 pro</option>
+                <option value="14">iPhone 14 </option>
+                <option value="13p">iPhone 13 pro</option>
+            </optgroup>
+            <optgroup label="iPade">
+                <option value="air">iPade Air</option>
+                <option value="pro">iPade pro</option>
+            </optgroup>
+        </select>
+        <hr/>
+        <select name="s2"  multiple>
+            <optgroup label="iPhone">
+                <option value="14p">iPhone 14 pro</option>
+                <option value="14">iPhone 14 </option>
+                <option value="13p">iPhone 13 pro</option>
+            </optgroup>
+            <optgroup label="iPade">
+                <option value="air">iPade Air</option>
+                <option value="pro">iPade pro</option>
+            </optgroup>
+        </select>
+        <input type="submit">
+    </form>
+</body>
+</html>

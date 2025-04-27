@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>學輸入格</title>
+</head>
+
+<body>
+    <form action="http://127.0.0.1:5566/" method="post">
+        button:<input type="button" value="送出"><br/>
+        <!--=checkbox可用checked屬性來做預選效果=-->
+        checkbox:<input type="checkbox" checked value="1">老師<input type="checkbox">
+        color:<input type="date"><br />
+        date:<input type="date"><br/>
+        <!--datetime:<input type="datetime"><br/>-->
+        datetime-local:<input type="datetime-local"><br />
+        email:<input type="email" maxlength="100" placeholder="email"><br\>
+
+        file:<input type="file"><br>
+        hidden:<input type="hidden"><br>
+        <!--input image可做圖形按鍵-->
+        imqge<input type="image" src="images/mr.b.jpg" width="100" height="100"><br/>
+        month:<input type="month"><br/>
+        number:<input type="number" min="0" max="100" step="10 placeholder=0"><br/>
+        password:<input type="password"><br>
+        <!--radio可用name屬性來識別同一組-->
+        radio:<input type="radio" name="sex" checked>男<input type="radio" name="sex">女<br />
+        range:<input type="range" name="0" max="10" value="6" step="2"><br />
+        reset:<input type="reset"><br />
+        search:<input type="search"><br/>
+        submit:<input type="submit"><br />
+        tel:<input type="tel"><br/>
+        text:<input type="text"><br/>
+        time:<input type="time"><br/>
+        url:<input type="url"><br/>
+        week:<input type="week"><br/>
+
+    </form>
+</body>
+</html>

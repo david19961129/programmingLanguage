@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/wsl.ico" type="image/x-icon">
+    <title>和AO老師快樂學HTML</title>
+    <style>
+        #AO {
+            color: blue;
+        }
+
+        #FRANK {
+            color: chartreuse;
+        }
+
+        .teacher {
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 標題段落 -->
+    <h1>HTML 標籤與架構</h1>
+    <h1>我是大標題</h1>
+    <p>我是內容</p>
+    <hr />
+     <p>大家好，我是 <strong>AO老師</strong></p>
+    <hr />
+    <!-- 圖片 -->
+    <img src="images/1.png" />  
+    <hr />
+    <!-- 超連結 -->
+    <a href="https://www.google.com" target="_blank">連結到 Google 搜尋</a>
+    <hr />
+    <!-- inline -->
+    <span>AO</span>
+    <span>FRANK</span>
+    <hr/>
+    <div>ID:AO</div>
+    <div id="AO" class="teacher">ID:AO</div>
+    <div id="FRANK">ID:FRANK</div>
+    <!---=== 一般ID是唯一的，但瀏覽器不一定會有錯，一樣仍呈現樣式，但要養成習慣 ===--->
+    <div id="AO">ID:AO</div>
+</body>
+
+</html>

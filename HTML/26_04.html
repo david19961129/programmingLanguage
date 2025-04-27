@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html lang="zh-TW">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>25_課程_練習</title>
+</head>
+
+<body>
+    <div id="result"></div>
+
+    <script>
+        if(typeof(Storage)!=="undefined"){
+            localStorage.setItem("lastname","OLA!OLA!OLA!");
+
+            document.getElementById("result").innerHTML=localStorage.getItem("lastname");
+        }else{
+            document.getElementById("result").innerHTML="Sorry,your bowser does not support web storage...";
+        }
+    </script>
+</body>
+</html>

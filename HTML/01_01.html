@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>和AO老師快樂學HTML</title>
+</head>
+
+<body>
+    <h1>使用空格、換行和特殊符號需要注意</h1>
+    <p>無法連續空白：空白開始                    空白結束</p>
+    <p>無法連續空白：空白開始　　　　　　　　空白結束</p>
+    <hr />
+    <!--- &nbsp; -->
+    <p>連續空白：空白開始&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;空白結束</p>
+    <hr />
+    <p>無法出現標籤：<span></span></p>
+    <hr/>
+    <!-- &lt; 呈現< -->
+    <!-- &gt; 呈現> -->
+    <p>出現標籤：&lt;span&gt;</p>
+    <hr/>
+    <p>不能換行
+        不能換行
+    </p>
+    <hr/>
+    <p>
+        可以換行
+        <br />
+        可以換行
+    <p>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 全局屬性範例</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+        .red-text {
+            color: red;
+        }
+        .blue-text {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h2>HTML 全局屬性範例</h2>
+    <!-- tabindex 屬性 -->
+    <p >對照段落。</p>
+    <p tabindex="1">按下 Tab 鍵時，這個段落將會先獲得焦點 (tabindex 設為 1)。</p>
+    <!-- accesskey 屬性 -->
+    <!-- <p accesskey="h">按下 Alt + H 快捷鍵可以聚焦到這個段落。</p> -->
+
+    <!-- class 屬性 -->
+    <!-- <p class="highlight red-text">這個段落有多個樣式類別，背景是黃色，文字是紅色。</p>
+ -->
+    <!-- contenteditable 屬性 -->
+    <p contenteditable="true">這個段落內容可編輯，試著點擊並修改它。</p>
+
+    <!-- data-* 屬性XXX -->
+    <!-- <p data-user="JohnDoe" data-role="admin">這裡是一個自定義數據屬性，使用 JavaScript 可以讀取這些值。</p>
+ -->
+    <!-- dir 屬性 -->
+    <p dir="rtl">這個段落的文字從右到左顯示。</p>
+
+    <!-- draggable 屬性 -->
+    <p draggable="true">這個段落可以拖動，試著將它拖到其他地方。</p>
+
+    <!-- hidden 屬性 -->
+    <p hidden>這個段落被隱藏了，除非使用 JavaScript 或 CSS 來顯示它。</p>
+
+    <!-- id 屬性 -->
+    <!-- <p id="unique-id">這個段落有一個唯一的 id：unique-id。</p> -->
+
+    <!-- lang 屬性 -->
+    <!-- <p lang="en">This paragraph is in English.</p> -->
+
+    <!-- spellcheck 屬性 -->
+    <!-- <p spellcheck="true">This paragraf has speling mistakes, and they will be highlighted if spellcheck is enabled.</p>
+ -->
+    <!-- style 屬性 -->
+    <!-- <p style="color: green; font-weight: bold;">這個段落的樣式是用 style 屬性直接設定的，文字為綠色且加粗。</p> -->
+
+
+    <!-- title 屬性 -->
+    <p title="這是一個提示">將滑鼠懸停在這個段落上，會顯示提示文字。</p>
+
+    <!-- translate 屬性 -->
+    <p translate="no">這個段落不會被自動翻譯。</p>
+    <p translate="no">English</p>
+    <p >English</p>
+
+</body>
+</html>

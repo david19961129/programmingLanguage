@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        script-src 'self' https://apis.example.com;
+        style-src 'self' 'unsafe-inline';
+        img-src 'self' data:;
+        connect-src 'self' https://api.example.com;
+        font-src 'self' https://fonts.example.com;
+        object-src 'none';
+        frame-ancestors 'none';
+        base-uri 'self';
+    ">
+
+    <title>CSP Example</title>
+</head>
+
+<body>
+    <h1>Content Security Policy Example</h1>
+    <p>This page demonstrates a simple CSP implementation.</p>
+
+    <!-- Example of loading an image -->
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUA" alt="Sample Image">
+    <!-- Example of a working image using data URI -->
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUA
+AAAFCAYAAACNbyblAAAAHElEQVQI12P4
+//8/w38GIAXDIBKE0DHxgljNBAAO
+9TXL0Y4OHwAAAABJRU5ErkJggg==" alt="Red Dot">
+    <!-- External API script allowed by CSP -->
+    <script src="https://apis.example.com/library.js"></script>
+
+</body>
+
+</html>
