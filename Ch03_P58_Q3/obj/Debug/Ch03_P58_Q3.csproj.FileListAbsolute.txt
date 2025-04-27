@@ -1,7 +1,0 @@
-C:\CS\CS2024A\Ch03_P58_Q3\bin\Debug\Ch03_P58_Q3.exe.config
-C:\CS\CS2024A\Ch03_P58_Q3\bin\Debug\Ch03_P58_Q3.exe
-C:\CS\CS2024A\Ch03_P58_Q3\bin\Debug\Ch03_P58_Q3.pdb
-C:\CS\CS2024A\Ch03_P58_Q3\obj\Debug\Ch03_P58_Q3.csproj.AssemblyReference.cache
-C:\CS\CS2024A\Ch03_P58_Q3\obj\Debug\Ch03_P58_Q3.csproj.CoreCompileInputs.cache
-C:\CS\CS2024A\Ch03_P58_Q3\obj\Debug\Ch03_P58_Q3.exe
-C:\CS\CS2024A\Ch03_P58_Q3\obj\Debug\Ch03_P58_Q3.pdb
