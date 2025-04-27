@@ -1,0 +1,7 @@
+C:\CS\CS2024A\Ch03_P45_Jaggel_2D_Arrays_EX\bin\Debug\Ch03_P45_Jaggel_2D_Arrays_EX.exe.config
+C:\CS\CS2024A\Ch03_P45_Jaggel_2D_Arrays_EX\bin\Debug\Ch03_P45_Jaggel_2D_Arrays_EX.exe
+C:\CS\CS2024A\Ch03_P45_Jaggel_2D_Arrays_EX\bin\Debug\Ch03_P45_Jaggel_2D_Arrays_EX.pdb
+C:\CS\CS2024A\Ch03_P45_Jaggel_2D_Arrays_EX\obj\Debug\Ch03_P45_Jaggel_2D_Arrays_EX.csproj.AssemblyReference.cache
+C:\CS\CS2024A\Ch03_P45_Jaggel_2D_Arrays_EX\obj\Debug\Ch03_P45_Jaggel_2D_Arrays_EX.csproj.CoreCompileInputs.cache
+C:\CS\CS2024A\Ch03_P45_Jaggel_2D_Arrays_EX\obj\Debug\Ch03_P45_Jaggel_2D_Arrays_EX.exe
+C:\CS\CS2024A\Ch03_P45_Jaggel_2D_Arrays_EX\obj\Debug\Ch03_P45_Jaggel_2D_Arrays_EX.pdb
