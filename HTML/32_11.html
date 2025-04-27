@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1>JavaScript Objects</h1>
+
+    <p>JavaScript uses names to access object properties.</p>
+    <p id="demo"></p>
+
+    <script>
+        const person = { firstName: "John", lastName: "Doe", age: 46 };
+        console.log('person:' + person);
+        console.log('typeof(person):' + typeof (person));
+        console.log('person.age is ' + typeof person.age);
+        console.log('Array.isArray(person):'+Array.isArray(person));
+        console.log('person instanceof Array: ' + (person instanceof Array));
+        //console.log('person length ' + person.length);
+
+
+
+        
+        document.getElementById("demo").innerHTML = person.firstName;
+    </script>
+
+</body>
+
+</html>

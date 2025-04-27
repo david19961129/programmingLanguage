@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1>JavaScript Arrays</h1>
+
+    
+    <p id="demo"></p>
+
+    <script>
+        const fruits=["Banana","Orange","Apple","Mango"];
+        fruits[10]="西瓜";
+        let flen=fruits.length
+
+        let text="<ul>";
+        for(let i=0;i<flen;i++)
+        {
+            alert(i+':'+fruits[i]);
+            text += "<li>"+fruits[i]+"</li>";
+        }
+        text +="</ul>";
+        
+        document.getElementById("demo").innerHTML =text;
+    </script>
+
+</body>
+
+</html>

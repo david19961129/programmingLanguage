@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>隨機擲籤結果</title>
+</head>
+<body>
+    <div class="container">
+        <p id="demo"></p>
+    </div>
+
+    <script>
+    let day;
+    console.log(new Date().getDay());
+    switch(new Date().getDay()){
+        case 0:
+            day="Sunday";
+            break;
+
+        case 1:
+            day="Monday";
+            break;
+
+        case 2:
+            day="Tuesday";
+            break;
+
+        case 3:
+            day="Wednesday";
+            break;
+
+        case 4:
+            day="Thursday";
+            break;
+
+        case 5:
+            day="Friday";
+            break;
+
+        case 6:
+            day="Saturday";
+            break;
+
+        default:
+            day="沒有";
+            break;
+    }
+    document.getElementById("demo").innerText = "今天是"+day;
+    </script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Table Example</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="inputText">
+    <button onclick="add_unshift_Item()">增加(unshift)</button>
+    <button onclick="addItem()">增加(push)</button>
+    <button onclick="sortItem()">排序</button>
+    <button onclick="sort_r_Item()">排序(反)</button>
+    <button onclick="num_sortItem()">數字排序</button>
+    <button onclick="num_sort_r_Item()">數字排序(反)</button>
+    <button onclick="num_random_Item()">隨機</button>
+    <button onclick="saveArray()">存儲陣列到本地存儲</button>
+    <button onclick="retrieveArray()">從本地存儲中檢索陣列</button>
+    <button onclick="search()">查詢</button>
+
+    <table id="arrayTable">
+        <thead>
+            <tr>
+                <th>索引</th>
+                <th>項目</th>
+                <th>DataType</th>
+                <th>修改</th>
+                <th>移除</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script>
+        var array = [];
+
+        function displayArray() {
+            var tablebody = document.getElementById("arrayTable").getElementsByTagName("tbody")[0];
+            tablebody.innerHTML = "";
+
+            for (var i = 0; i < array.length; i++) {
+                var newRow = tablebody.insertRow(i);
+                var indexCell = newRow.insertCell(0);
+                var itemCell = newRow.insertCell(1);
+                var datatypeCell = newRow.insertCell(2);
+                var updateCell = newRow.insertCell(3);
+                var removeCell = newRow.insertCell(4);
+
+                indexCell.innerHTML = i;
+                itemCell.innerHTML = array[i];
+                datatypeCell.innerHTML = typeof array[i];
+                updateCell.innerHTML = "<button onclick=\"updateItem(" + i + ")\">修改</button>";
+                removeCell.innerHTML = "<button onclick=\"removeItem(" + i + ")\">移除</button>";
+            }
+        }
+
+        function add_unshift_Item() {
+            var input = document.getElementById("inputText").value;
+
+            if (input === "" || isNaN(input)) {
+                array.unshift(input);
+            } else {
+                array.unshift(Number(input));
+            }
+            displayArray();
+            document.getElementById("inputText").value = "";
+            document.getElementById("inputText").focus();
+        }
+
+        function addItem() {
+            var input = document.getElementById("inputText").value;
+
+            if (input === "" || isNaN(input)) {
+                array.push(input);
+            } else {
+                array.push(Number(input));
+            }
+            displayArray();
+            document.getElementById("inputText").value = "";
+            document.getElementById("inputText").focus();
+        }
+
+        function updateItem(index) {
+            var input = document.getElementById("inputText").value;
+            array[index] = input;
+            displayArray();
+            document.getElementById("inputText").value = "";
+            document.getElementById("inputText").focus();
+        }
+
+        function removeItem(index) {
+            array.splice(index, 1);
+            displayArray();
+        }
+
+        function sortItem() {
+            array.sort();
+            displayArray();
+            document.getElementById("inputText").value = "";
+            document.getElementById("inputText").focus();
+        }
+
+        function sort_r_Item() {
+            array.sort();
+            array.reverse();
+            displayArray();
+            document.getElementById("inputText").value = "";
+            document.getElementById("inputText").focus();
+        }
+
+        function num_sortItem() {
+            array.sort(function(a, b) { return a - b; });
+            displayArray();
+            document.getElementById("inputText").value = "";
+            document.getElementById("inputText").focus();
+        }
+
+        function num_sort_r_Item() {
+            array.sort(function(a, b) { return b - a; });
+            displayArray();
+            document.getElementById("inputText").value = "";
+            document.getElementById("inputText").focus();
+        }
+
+        function num_random_Item() {
+            array.sort(function() { return 0.5 - Math.random(); });
+            displayArray();
+            document.getElementById("inputText").value = "";
+            document.getElementById("inputText").focus();
+        }
+
+        function saveArray() {
+            localStorage.setItem('myArray', JSON.stringify(array));
+            console.log('Array saved to local storage:', array);
+        }
+
+        function retrieveArray() {
+            var storedArray = localStorage.getItem('myArray');
+            if (storedArray) {
+                array = JSON.parse(storedArray);
+                console.log('Retrieved Array:', array);
+            } else {
+                console.log('No array found in local storage.');
+                alert("沒有存儲的陣列可以檢索！");
+            }
+            displayArray();
+        }
+
+        function search() {
+            var input = document.getElementById("inputText").value;
+            if (!(input === "" || isNaN(input))) {
+                input = Number(input);
+            }
+            let qry = array.indexOf(input);
+            if (qry !== -1) {
+                alert("Found at index: " + qry);
+            } else {
+                alert("Not found in the array");
+            }
+            document.getElementById("inputText").value = "";
+            document.getElementById("inputText").focus();
+        }
+    </script>
+</body>
+</html>

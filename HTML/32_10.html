@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        const person=["john","Doe",46];
+        console.log('person:'+person);
+        console.log('typeof(person):'+typeof(person));
+        console.log('person[2] is:'+(typeof(person[2])));
+        console.log('person.length:'+person.length);
+        console.log('Array.isArray(person):'+Array.isArray(person));
+        console.log('(person instanceof Array):'+(person instanceof Array));
+
+        document.getElementById("demo").innerHTML = person.toString();
+
+        
+    </script>
+    
+</body>
+</html>

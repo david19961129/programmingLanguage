@@ -1,0 +1,38 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title></title>
+</head>
+<body>
+    <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+    <script>
+    //定義x軸的標籤數據
+    const xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+    // 定義 y 數據
+    const yValues = [55, 49, 44, 24, 15];
+    //定義每個往狀的顏色
+    barColors = ["red", "green", "blue", "orange", "brown"];
+    //創建一個新的 Chart 實例
+    new Chart("myChart", {
+    type:"bar",//設定圖表類型為住狀圖
+    data: {
+    labels:xValues,//設定 x 軸的標籤
+    datasets:[{
+    backgroundColor: barColors,//設定每個往狀的背景顏色
+    data:yValues //設定 y軸的數據
+    }]
+    },
+    options: {
+    legend: {display: false},//不顯示圖例
+    title: {
+    display:true,//顯示標題
+    text: "World Wine Production 2018"//設定標題文字
+    },
+    scales: {
+        yAxes:[{ticks: {min:6,max:100}}],//設定Y軸的刻度範
+    }
+}
+    });
+    </script>
+</body>

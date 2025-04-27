@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Date 方法</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: antiquewhite;
+        }
+        tr:nth-child(odd) {
+            background-color: beige;
+        }
+        tr:hover {
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Date 方法</h1>
+    <table>
+        <tr>
+            <th>方法</th>
+            <th>說明</th>
+            <th>範例</th>
+            <th>結果</th>
+        </tr>
+        <tr>
+            <td>getFullYear()</td>
+            <td>返回年份</td>
+            <td>date.getFullYear()</td>
+            <td id="getFullYearResult"></td>
+        </tr>
+        <tr>
+            <td>getMonth()</td>
+            <td>返回月份 (0-11)</td>
+            <td>date.getMonth()</td>
+            <td id="getMonthResult"></td>
+        </tr>
+        <tr>
+            <td>getDate()</td>
+            <td>返回日期 (1-31)</td>
+            <td>date.getDate()</td>
+            <td id="getDateResult"></td>
+        </tr>
+        <tr>
+            <td>getHours()</td>
+            <td>返回小時 (0-23)</td>
+            <td>date.getHours()</td>
+            <td id="getHoursResult"></td>
+        </tr>
+        <tr>
+            <td>getMinutes()</td>
+            <td>返回分鐘 (0-59)</td>
+            <td>date.getMinutes()</td>
+            <td id="getMinutesResult"></td>
+        </tr>
+        <tr>
+            <td>getSeconds()</td>
+            <td>返回秒數 (0-59)</td>
+            <td>date.getSeconds()</td>
+            <td id="getSecondsResult"></td>
+        </tr>
+    </table>
+
+    <script>
+        // 取得當前日期和時間
+        var date = new Date();
+        // 定義月份和星期的陣列
+        const months = ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"];
+        const weekDays = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+
+        // 設定年份和民國年
+        document.getElementById("getFullYearResult").textContent = date.getFullYear() + ';\t民國:' + (date.getFullYear() - 1911).toString();
+        
+        // 設定月份和套代碼
+        document.getElementById("getMonthResult").textContent = (date.getMonth() + 1) + ';\t月份:' + (date.getMonth() - 12).toString();
+        
+        // 設定日期和日期代碼
+        document.getElementById("getDateResult").textContent = date.getDate() + ';\t日期:' + (date.getDate() + 100).toString();
+        
+        // 設定小時和時代碼
+        document.getElementById("getHoursResult").textContent = date.getHours() + ';\t小時:' + (date.getHours() * 2).toString();
+        
+        // 設定分鐘和分代碼
+        document.getElementById("getMinutesResult").textContent = date.getMinutes() + ';\t分鐘:' + (date.getMinutes() * 3).toString();
+        
+        // 設定秒數和秒代碼
+        document.getElementById("getSecondsResult").textContent = date.getSeconds() + ';\t秒:' + (date.getSeconds() * 4).toString();
+    </script>
+</body>
+</html>

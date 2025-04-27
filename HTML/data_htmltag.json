@@ -1,0 +1,613 @@
+[
+  {
+    "tag": "<!--...-->",
+    "element": "-",
+    "description": "註釋標籤"
+  },
+  {
+    "tag": "<！DOCTYPE>",
+    "element": "-",
+    "description": "聲明"
+  },
+  {
+    "tag": "<a>",
+    "element": "行內",
+    "description": "建立超連結"
+  },
+  {
+    "tag": "<abbr>",
+    "element": "行內",
+    "description": "建立縮寫"
+  },
+  {
+    "tag": "<address>",
+    "element": "區塊",
+    "description": "為作家聯繫資訊定義內容"
+  },
+  {
+    "tag": "<acronym>",
+    "element": "-",
+    "description": "HTML5不支援了"
+  },
+  {
+    "tag": "<applet>",
+    "element": "-",
+    "description": "HTML5不支援了"
+  },
+  {
+    "tag": "<area>",
+    "element": "-",
+    "description": "定義影像地圖中的熱區"
+  },
+  {
+    "tag": "<article>",
+    "element": "區塊",
+    "description": "定義一個文章"
+  },
+  {
+    "tag": "<aside>",
+    "element": "區塊",
+    "description": "定義頁面的側邊內容"
+  },
+  {
+    "tag": "<audio>",
+    "element": "區塊",
+    "description": "標籤用於嵌入聲音"
+  },
+  {
+    "tag": "<b>",
+    "element": "行內",
+    "description": "粗體字"
+  },
+  {
+    "tag": "<base>",
+    "element": "-",
+    "description": "標記指定基網址"
+  },
+  {
+    "tag": "<basefont>",
+    "element": "-",
+    "description": "HTML5不支援了"
+  },
+  {
+    "tag": "<bdi>",
+    "element": "行內",
+    "description": "標記隔離了文本的一部分"
+  },
+  {
+    "tag": "<bdo>",
+    "element": "行內",
+    "description": "記用於覆蓋當前文本方向"
+  },
+  {
+    "tag": "<big>",
+    "element": "-",
+    "description": "HTML5不支援了"
+  },
+  {
+    "tag": "<blockquote>",
+    "element": "區塊",
+    "description": "定義長的引用"
+  },
+  {
+    "tag": "<body>",
+    "element": "區塊",
+    "description": "定義文件的正文"
+  },
+  {
+    "tag": "<br>",
+    "element": "行內",
+    "description": "插入斷行",
+    "empty": "Y"
+  },
+  {
+    "tag": "<button>",
+    "element": "行內",
+    "description": "定義按鈕"
+  },
+  {
+    "tag": "<canvas>",
+    "element": "行內",
+    "description": "畫布，用於圖形、遊戲等"
+  },
+  {
+    "tag": "<caption>",
+    "element": "區塊",
+    "description": "定義表格的標題"
+  },
+  {
+    "tag": "<center>",
+    "element": "-",
+    "description": "HTML5不支援了"
+  },
+  {
+    "tag": "<cite>",
+    "element": "行內",
+    "description": "引用，通常用於書籍、文章等"
+  },
+  {
+    "tag": "<code>",
+    "element": "行內",
+    "description": "定義電腦程式碼"
+  },
+  {
+    "tag": "<col>",
+    "element": "行內",
+    "description": "定義表格的一列"
+  },
+  {
+    "tag": "<colgroup>",
+    "element": "區塊",
+    "description": "定義表格中列的組"
+  },
+  {
+    "tag": "<data>",
+    "element": "-",
+    "description": "定義該元素為數據處理"
+  },
+  {
+    "tag": "<datalist>",
+    "element": "行內",
+    "description": "定義 input 元素的選項列表"
+  },
+  {
+    "tag": "<dd>",
+    "element": "區塊",
+    "description": "定義 description 列表中的項目"
+  },
+  {
+    "tag": "<del>",
+    "element": "行內",
+    "description": "定義被刪除的文本"
+  },
+  {
+    "tag": "<details>",
+    "element": "區塊",
+    "description": "定義詳細信息"
+  },
+  {
+    "tag": "<dfn>",
+    "element": "行內",
+    "description": "定義一個專有名詞"
+  },
+  {
+    "tag": "<dialog>",
+    "element": "區塊",
+    "description": "定義對話框或窗口"
+  },
+  {
+    "tag": "<dir>",
+    "element": "-",
+    "description": "HTML5不支援了"
+  },
+  {
+    "tag": "<div>",
+    "element": "區塊",
+    "description": "定義文檔中的區段"
+  },
+  {
+    "tag": "<dl>",
+    "element": "區塊",
+    "description": "定義描述列表"
+  },
+  {
+    "tag": "<dt>",
+    "element": "區塊",
+    "description": "定義描述列表中的項目"
+  },
+  {
+    "tag": "<em>",
+    "element": "行內",
+    "description": "強調文本"
+  },
+  {
+    "tag": "<embed>",
+    "element": "行內",
+    "description": "定義外部互動內容或外部應用程式"
+  },
+  {
+    "tag": "<fieldset>",
+    "element": "區塊",
+    "description": "定義表單中的一組元素"
+  },
+  {
+    "tag": "<figcaption>",
+    "element": "區塊",
+    "description": "定義 figure 元素的標題"
+  },
+  {
+    "tag": "<figure>",
+    "element": "區塊",
+    "description": "定義嵌入的內容，如圖片、圖表、照片、聲音、音頻、視頻、文本"
+  },
+  {
+    "tag": "<footer>",
+    "element": "區塊",
+    "description": "定義文檔或區塊的底部"
+  },
+  {
+    "tag": "<form>",
+    "element": "區塊",
+    "description": "定義一個 HTML 表單"
+  },
+  {
+    "tag": "<h1>",
+    "element": "區塊",
+    "description": "定義標題1"
+  },
+  {
+    "tag": "<h2>",
+    "element": "區塊",
+    "description": "定義標題2"
+  },
+  {
+    "tag": "<h3>",
+    "element": "區塊",
+    "description": "定義標題3"
+  },
+  {
+    "tag": "<h4>",
+    "element": "區塊",
+    "description": "定義標題4"
+  },
+  {
+    "tag": "<h5>",
+    "element": "區塊",
+    "description": "定義標題5"
+  },
+  {
+    "tag": "<h6>",
+    "element": "區塊",
+    "description": "定義標題6"
+  },
+  {
+    "tag": "<head>",
+    "element": "區塊",
+    "description": "定義文檔的信息"
+  },
+  {
+    "tag": "<header>",
+    "element": "區塊",
+    "description": "定義文檔或區塊的頭部"
+  },
+  {
+    "tag": "<hr>",
+    "element": "行內",
+    "description": "定義水平規則"
+  },
+  {
+    "tag": "<i>",
+    "element": "行內",
+    "description": "斜體文本"
+  },
+  {
+    "tag": "<iframe>",
+    "element": "區塊",
+    "description": "定義一個內嵌的框架"
+  },
+  {
+    "tag": "<img>",
+    "element": "行內",
+    "description": "定義圖片"
+  },
+  {
+    "tag": "<input>",
+    "element": "行內",
+    "description": "定義輸入元素"
+  },
+  {
+    "tag": "<ins>",
+    "element": "行內",
+    "description": "定義插入的文本"
+  },
+  {
+    "tag": "<kbd>",
+    "element": "行內",
+    "description": "定義鍵盤文本"
+  },
+  {
+    "tag": "<label>",
+    "element": "行內",
+    "description": "定義表單元素的標籤"
+  },
+  {
+    "tag": "<legend>",
+    "element": "行內",
+    "description": "定義 fieldset 元素的標題"
+  },
+  {
+    "tag": "<li>",
+    "element": "區塊",
+    "description": "定義列表項"
+  },
+  {
+    "tag": "<link>",
+    "element": "行內",
+    "description": "定義文檔與外部資源的關係"
+  },
+  {
+    "tag": "<main>",
+    "element": "區塊",
+    "description": "定義文檔或應用程序的主要內容"
+  },
+  {
+    "tag": "<map>",
+    "element": "區塊",
+    "description": "定義客戶端圖像地圖"
+  },
+  {
+    "tag": "<mark>",
+    "element": "行內",
+    "description": "定義突出顯示的文本"
+  },
+  {
+    "tag": "<menu>",
+    "element": "區塊",
+    "description": "定義無序列表的內容"
+  },
+  {
+    "tag": "<meta>",
+    "element": "行內",
+    "description": "定義元數據"
+  },
+  {
+    "tag": "<meter>",
+    "element": "行內",
+    "description": "定義度量尺"
+  },
+  {
+    "tag": "<nav>",
+    "element": "區塊",
+    "description": "定義導航連結"
+  },
+  {
+    "tag": "<noframes>",
+    "element": "-",
+    "description": "HTML5不支援了"
+  },
+  {
+    "tag": "<noscript>",
+    "element": "-",
+    "description": "定義不支持腳本的替代內容"
+  },
+  {
+    "tag": "<object>",
+    "element": "行內",
+    "description": "定義嵌入的對象"
+  },
+  {
+    "tag": "<ol>",
+    "element": "區塊",
+    "description": "定義有序列表"
+  },
+  {
+    "tag": "<optgroup>",
+    "element": "區塊",
+    "description": "定義選項組"
+  },
+  {
+    "tag": "<option>",
+    "element": "區塊",
+    "description": "定義選項"
+  },
+  {
+    "tag": "<output>",
+    "element": "行內",
+    "description": "定義輸出的結果"
+  },
+  {
+    "tag": "<p>",
+    "element": "區塊",
+    "description": "定義段落"
+  },
+  {
+    "tag": "<param>",
+    "element": "行內",
+    "description": "定義對象的參數"
+  },
+  {
+    "tag": "<picture>",
+    "element": "行內",
+    "description": "定義圖片的容器"
+  },
+  {
+    "tag": "<pre>",
+    "element": "區塊",
+    "description": "定義預格式化的文本"
+  },
+  {
+    "tag": "<progress>",
+    "element": "行內",
+    "description": "定義任務的進度"
+  },
+  {
+    "tag": "<q>",
+    "element": "行內",
+    "description": "定義短的引用"
+  },
+  {
+    "tag": "<rp>",
+    "element": "行內",
+    "description": "定義 ruby 注釋的起始和結束"
+  },
+  {
+    "tag": "<rt>",
+    "element": "行內",
+    "description": "定義括號中的字符的解釋"
+  },
+  {
+    "tag": "<ruby>",
+    "element": "行內",
+    "description": "定義 ruby 注釋"
+  },
+  {
+    "tag": "<s>",
+    "element": "行內",
+    "description": "定義刪除的文本"
+  },
+  {
+    "tag": "<samp>",
+    "element": "行內",
+    "description": "定義樣本文本"
+  },
+  {
+    "tag": "<script>",
+    "element": "-",
+    "description": "定義客戶端腳本"
+  },
+  {
+    "tag": "<search>",
+    "element": "區塊",
+    "description": "指定...與搜索相關的元素"
+  },
+  {
+    "tag": "<section>",
+    "element": "區塊",
+    "description": "定義文檔中的節"
+  },
+  {
+    "tag": "<select>",
+    "element": "行內",
+    "description": "定義下拉列表"
+  },
+  {
+    "tag": "<small>",
+    "element": "行內",
+    "description": "定義小型文本"
+  },
+  {
+    "tag": "<source>",
+    "element": "-",
+    "description": "為媒體元素指定多個媒體資源"
+  },
+  {
+    "tag": "<span>",
+    "element": "行內",
+    "description": "定義一個內容的範圍"
+  },
+  {
+    "tag": "<strike>",
+    "element": "-",
+    "description": "HTML5不支援了"
+  },
+  {
+    "tag": "<strong>",
+    "element": "行內",
+    "description": "定義加重強調的文本"
+  },
+  {
+    "tag": "<style>",
+    "element": "-",
+    "description": "定義文檔的樣式信息"
+  },
+  {
+    "tag": "<sub>",
+    "element": "行內",
+    "description": "定義下標文本"
+  },
+  {
+    "tag": "<summary>",
+    "element": "行內",
+    "description": "定義 details 元素的摘要"
+  },
+  {
+    "tag": "<sup>",
+    "element": "行內",
+    "description": "定義上標文本"
+  },
+  {
+    "tag": "<svg>",
+    "element": "行內",
+    "description": "定義 SVG 圖形"
+  },
+  {
+    "tag": "<table>",
+    "element": "區塊",
+    "description": "定義表格"
+  },
+  {
+    "tag": "<tbody>",
+    "element": "區塊",
+    "description": "定義表格中的主體部分"
+  },
+  {
+    "tag": "<td>",
+    "element": "區塊",
+    "description": "定義表格中的單元格"
+  },
+  {
+    "tag": "<template>",
+    "element": "區塊",
+    "description": "定義模板內容"
+  },
+  {
+    "tag": "<textarea>",
+    "element": "區塊",
+    "description": "定義多行的文本輸入控件"
+  },
+  {
+    "tag": "<tfoot>",
+    "element": "區塊",
+    "description": "定義表格中的腳部部分"
+  },
+  {
+    "tag": "<th>",
+    "element": "區塊",
+    "description": "定義表格中的表頭單元格"
+  },
+  {
+    "tag": "<thead>",
+    "element": "區塊",
+    "description": "定義表格中的頭部部分"
+  },
+  {
+    "tag": "<time>",
+    "element": "行內",
+    "description": "定義時間"
+  },
+  {
+    "tag": "<title>",
+    "element": "行內",
+    "description": "定義文檔的標題"
+  },
+  {
+    "tag": "<tr>",
+    "element": "區塊",
+    "description": "定義表格中的行"
+  },
+  {
+    "tag": "<track>",
+    "element": "-",
+    "description": "定義媒體文件的文本軌道"
+  },
+  {
+    "tag": "<tt>",
+    "element": "區塊",
+    "description": "HTML5不支援了"
+  },
+  {
+    "tag": "<u>",
+    "element": "行內",
+    "description": "定義下劃線文本"
+  },
+  {
+    "tag": "<ul>",
+    "element": "區塊",
+    "description": "定義無序列表"
+  },
+  {
+    "tag": "<var>",
+    "element": "行內",
+    "description": "定義變量"
+  },
+  {
+    "tag": "<video>",
+    "element": "行內",
+    "description": "定義視頻"
+  },
+  {
+    "tag": "<wbr>",
+    "element": "行內",
+    "description": "定義可能的文本中的斷行"
+  }
+]

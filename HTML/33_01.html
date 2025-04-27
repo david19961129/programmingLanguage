@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1A2B 猜數字遊戲</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #game-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:disabled {
+            background-color: #ccc;
+        }
+        #message {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <h1>1A2B 猜數字遊戲</h1>
+        <input type="text" id="guess-input" placeholder="輸入三位數字">
+        <button id="guess-button">猜測</button>
+        <button id="reset-button" style="display:none;">重新開始</button>
+        <div id="message"></div>
+    </div>
+
+    <script>
+        // 生成隨機的三位數字
+        function generateRandomNumber() {
+            let digits = [];
+            while (digits.length < 3) {
+                let randomDigit = Math.floor(Math.random() * 10);
+                if (!digits.includes(randomDigit)) {
+                    digits.push(randomDigit);
+                }
+            }
+            return digits.join('');
+        }
+
+        // 計算 1A2B 的結果
+        function calculate1A2B(secret, guess) {
+            let A = 0;
+            let B = 0;
+            for (let i = 0; i < 3; i++) {
+                if (guess[i] === secret[i]) {
+                    A++;
+                } else if (secret.includes(guess[i])) {
+                    B++;
+                }
+            }
+            return `${A}A${B}B`;
+        }
+
+        // 初始化遊戲
+        function play1A2BGame() {
+            const secretNumber = generateRandomNumber();
+            let attempts = 0;
+            const guessInput = document.getElementById('guess-input');
+            const guessButton = document.getElementById('guess-button');
+            const resetButton = document.getElementById('reset-button');
+            const messageDiv = document.getElementById('message');
+            messageDiv.textContent = ""; // Reset message
+            guessButton.disabled = false;
+            resetButton.style.display = 'none';
+
+            guessButton.addEventListener('click', makeGuess);
+            resetButton.addEventListener('click', resetGame);
+
+            function makeGuess() {
+                const guess = guessInput.value.trim();
+                attempts++;
+
+                if (guess.length !== 3 || new Set(guess).size !== 3 || isNaN(guess)) {
+                    messageDiv.textContent = '輸入無效，請輸入一個由 0-9 組成的三位數字，且每個數字不重複。';
+                    return;
+                }
+
+                const result = calculate1A2B(secretNumber, guess);
+                messageDiv.textContent = `結果：${result}`;
+
+                if (result === '3A0B') {
+                    messageDiv.textContent = `恭喜你猜對了！你用了 ${attempts} 次機會。`;
+                    guessButton.disabled = true;
+                    resetButton.style.display = 'inline-block';
+                }
+            }
+
+            function resetGame() {
+                guessInput.value = '';
+                play1A2BGame();
+            }
+        }
+
+        // 開始遊戲
+        play1A2BGame();
+    </script>
+</body>
+</html>

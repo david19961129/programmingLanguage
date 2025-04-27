@@ -1,0 +1,112 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map 操作示例</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Event Name</th>
+            <th>Inline Event Handler</th>
+            <th>Event Listener</th>
+            <th>Event Handler Property</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>click</td>
+            <td><button onclick="myFunction(event)">Click me</button></td>
+            <td><button id="myButton">Click me</button></td>
+            <td><button id="myButton2">Click me</button></td>
+          </tr>
+          <tr>
+            <td>mouseover</td>
+            <td>
+              <div onmouseover="myFunction(event)">Mouse over me</div>
+            </td>
+            <td>
+              <div id="myDiv">Mouse over me</div>
+            </td>
+            <td>
+              <div id="myDiv2">Mouse over me</div>
+            </td>
+          </tr>
+          <tr>
+            <td>keydown</td>
+            <td><input type="text" onkeydown="myFunction(event)"></td>
+            <td><input type="text" id="myInput"></td>
+            <td><input type="text" id="myInput2"></td>
+          </tr>
+          <!-- Add more events and examples as needed -->
+        </tbody>
+      </table>
+
+    <script>
+
+        const button =document.getElementById('myButton');
+        button.addEventListener('click',function(event){
+            myFunction(event);
+        });
+
+        const button2 =document.getElementById('myButton2');
+        button2.onclick=function(event){
+            myFunction(event);
+        };
+
+        function myFunction(event){
+            console.log('Event triggered by:',event.target);
+        }
+
+        const div =document.getElementById('myDiv');
+        div.addEventListener('mouseover',function(event){
+            myFunction(event);
+        });
+
+        const div2 =document.getElementById('myDiv2');
+        div2.onmouseover=function(event){
+            myFunction(event);
+        };
+
+        const input =document.getElementById('myInput');
+        input.addEventListener('keydown',function(event){
+            myFunction(event);
+        });
+
+        const input2 =document.getElementById('myInput2');
+        input2.onkeydown=function(event){
+            myFunction(event);
+        };
+
+        function myFunction(event) {
+            console.log('Event triggered by:', event.target);
+            console.log('Event currentTarget by:', event.currentTarget);
+            console.log('Event Timestamp:', event.timeStamp);
+            console.log('Event type:', event.type);
+            //
+            if (event.type === 'keydown') {
+              console.log('Key pressed:', event.key);
+              console.log('Key code:', event.code);
+            }
+            //
+            if (event.type.startsWith('mouse')) {
+              console.log('Mouse X:', event.clientX);
+              console.log('Mouse Y:', event.clientY);
+            }
+        }
+    </script>
+</body>

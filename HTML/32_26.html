@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>隨機擲籤結果</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            padding: 5px 10px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>擲籤結果</h2>
+        <button onclick="throwYao()">擲籤</button>
+        <p id="resultMessage"></p>
+    </div>
+
+    <script>
+        function throwYao() {
+            let yao1 = Math.random() < 0.5 ? 0 : 1;
+            let yao2 = Math.random() < 0.5 ? 0 : 1;
+            let message = '';
+
+            switch (true) {
+                case (yao1 === 1 && yao2 === 1):
+                    message = '二正生氣';
+                    break;
+                case (yao1 === 1 && yao2 === 0) || (yao1 === 0 && yao2 === 1):
+                    message = '一正一反是答應';
+                    break;
+                case (yao1 === 0 && yao2 === 0):
+                    message = '二反笑';
+                    break;
+                default:
+                    message = '錯誤';
+            }
+
+            // 顯示結果
+            document.getElementById("resultMessage").innerText = `結果: ${message}`;
+        }
+    </script>
+</body>
+</html>

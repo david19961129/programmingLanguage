@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1A2B 猜數字遊戲</title>
+    <script>
+        let a=7,b=8;
+        //---=石器時代=---
+        let c;
+        function sum(a,b){
+            return a+b;
+        }
+        c=sum(a,b);
+        console.log('typof sum:'+typeof sum);
+        console.log('c:'+c);
+        console.log('-----------------------');
+        //---=青銅器時代=---
+        let sum1=(a,b)=>{
+            return a+b;
+        }
+        let c1=sum1(a,b);
+        console.log('typof sum1:'+typeof sum1);
+        console.log('c1:'+c1);
+        console.log('-----------------------');
+        //---=鐵器時代=---
+        let c2=(
+            ()=>{
+                return a+b;
+            }
+        )();
+        console.log('typof c2:'+typeof c2);
+        console.log('c2:'+c2);
+        console.log('-----------------------');
+        //---=工業時代=---
+        let c3=(
+            ()=>a+b
+        )();
+        console.log('typof c3:'+typeof c3);
+        console.log('c3:'+c3);
+        console.log('-----------------------');
+        let c4=(
+            ()=>a+b
+        );
+        console.log('typof c4:'+typeof c4);
+        console.log('c4:'+c4);
+        console.log('-----------------------');
+
+        //---===datalists map ===---
+        console.log('---===datalists map ===---');
+        let datalists=[1,2,3,4,5];
+        //---=== ===---
+        let d0=datalists.map(handle);
+        function handle(item){
+            return item*2;
+        }
+        console.log('d0:'+d0);
+        console.log('---------------')
+        //---=== ===---
+        let d1 =datalists.map(
+            function(item){
+                return item*2
+            }
+        );
+        //---=== ===---
+        let d2 =datalists.map(
+            (item)=>{
+                return item*2;
+            }
+        );
+        console.log('d2:'+d2);
+        console.log('---------------')
+        //---=== ===---
+        let d3 =datalists.map(
+            (item)=>item*2
+        );
+        console.log('d3:'+d3);
+        console.log('---------------')
+        //---=== ===---
+        const obj_old ={
+            name:'AO',
+            sayHello:function(){
+                setTimeout(function(){
+                    console.log('Hello,'+this.name);
+                },1000);
+            }
+        };
+        console.log('obj_old.sayHello():'+obj_old.sayHello);
+        //---=== ===---
+        const obj ={
+            name:'AO',
+            sayHello:function(){
+                setTimeout(()=>{
+                    console.log('Hello,'+this.name);
+                },1000);
+            }
+        };
+        console.log('obj.sayHello():'+obj.sayHello);
+    </script>
+</head>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>邏輯運算符真值表格</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        
+        .true {
+            background-color: lightgreen;
+        }
+        
+        .false {
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <h1>邏輯運算符真值表格</h1>
+    <table>
+        <tr>
+            <th>輸入 A</th>
+            <th>輸入 B</th>
+            <th>AND</th>
+            <th>OR</th>
+            <th>NOT A</th>
+            <th>NOT B</th>
+            <th>XOR</th>
+        </tr>
+        <tr>
+            <td>T</td>
+            <td>T</td>
+            <td class="true">T</td>
+            <td class="true">T</td>
+            <td class="false">F</td>
+            <td class="false">F</td>
+            <td class="false">F</td>
+        </tr>
+        <tr>
+            <td>T</td>
+            <td>F</td>
+            <td class="false">F</td>
+            <td class="true">T</td>
+            <td class="false">F</td>
+            <td class="true">T</td>
+            <td class="true">T</td>
+        </tr>
+        <tr>
+            <td>F</td>
+            <td>T</td>
+            <td class="false">F</td>
+            <td class="true">T</td>
+            <td class="true">T</td>
+            <td class="false">F</td>
+            <td class="true">T</td>
+        </tr>
+        <tr>
+            <td>F</td>
+            <td>F</td>
+            <td class="false">F</td>
+            <td class="false">F</td>
+            <td class="true">T</td>
+            <td class="true">T</td>
+            <td class="false">F</td>
+        </tr>
+    </table>
+</body>
+</html>

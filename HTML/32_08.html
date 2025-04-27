@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <p id="demo"></p>
+    
+        <script>
+        const cars=["saab","volvo","BMW"];
+        const cars1=[
+            "saab",
+            "volvo",
+            "BMW"
+        ];
+        const cars2=[];
+        cars2[0]="saab";
+        cars2[1]="volvo";
+        cars2[2]="BMW";
+        const cars3=new Array("saab","volvo","BMW",1);
+        document.getElementById("demo").innerHTML = cars;
+        console.log('cars is '+typeof cars);
+        console.log('cars1 is '+typeof cars1);
+        console.log('cars2 is '+typeof cars2);
+        console.log('cars3 is '+typeof cars3);
+        console.log('cars[0] is'+typeof cars[0]);
+        console.log('cars3 is '+typeof cars3[3]);
+    
+        console.log('cars[0] '+ cars[0]);
+        console.log('cars[1] '+ cars[1]);
+    
+        cars[0]="0pel";
+        console.log('cars[0]: '+ cars[0]);
+        console.log('cars: '+ cars);
+        console.log('cars.toString(): '+ cars.toString());
+    
+        console.log('cars.length: '+ cars.length);
+        const fruits=["Banana","Orange","Apple","Mango"];
+        let fruit=fruits[fruits.length-1];
+        
+        </script>
+</head>
+<body>
+</body>
+</html>

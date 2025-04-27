@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #clock {
+          font-size: 48px;
+          font-weight: bold;
+          text-align: center;
+          padding: 20px;
+          background-color: #f2f2f2;
+          border-radius: 5px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+    
+        #hours,
+        #minutes,
+        #seconds {
+          display: inline-block;
+          width: 60px;
+          text-align: center;
+          border-radius: 5px;
+          background-color: #333;
+          color: #fff;
+          margin: 0 5px;
+          padding: 5px 0;
+        }
+      </style>
+</head>
+<body>
+    <div id="clock">
+     <span id="hours"></span>
+     <span id="minutes"></span>
+     <span id="seconds"></span>
+    </div>
+
+    <script>
+        function updateClock(){
+            let houesContainer=document.getElementById("hours");
+            let minutesContainer=document.getElementById("minutes");
+            let secondsContainer=document.getElementById("seconds");
+
+            let currentTime=new Date();
+
+            let hours =currentTime.getHours();
+            let minutes=currentTime.getMinutes();
+            let seconds=currentTime.getSeconds();
+
+            hours=hours<10? "0"+hours:hours;
+            minutes=minutes<10? "0"+minutes:minutes;
+            seconds=seconds<10? "0"+seconds:seconds;
+
+            houesContainer.textContent=hours;
+            minutesContainer.textContent=minutes;
+            secondsContainer.textContent=seconds;
+        }
+        setInterval(updateClock,1000);
+    </script>
+</body>
+
+</html>

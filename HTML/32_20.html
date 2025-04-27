@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>年份日曆生成器</title>
+  <style>
+    .sunday {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <input type="text" id="yearInput" placeholder="輸入年份">
+  <button onclick="generateCalendar()">生成行事曆</button>
+
+  <div id="calendarContainer"></div>
+
+  <script>
+    function generateCalendar() {
+      let yearInput = document.getElementById("yearInput");
+      let year = parseInt(yearInput.value);
+
+      if (isNaN(year)) {
+        alert("請輸入有效的年份");
+        return;
+      }
+      /*  */
+      let date = new Date(year, 0, 1);
+      let calendarContainer = document.getElementById("calendarContainer");
+      calendarContainer.innerHTML = "";
+
+      //return;
+      //-------------------------------------
+      for (let month = 0; month < 12; month++) {
+        let monthDate = new Date(year, month, 1);
+        //calendarContainer.innerHTML = calendarContainer.innerHTML +'<br/>'+monthDate;
+        //return;
+        let monthTitle = document.createElement("h2");
+        /* 使用當地語系設定將 Date 物件格式化為完整月份名稱，例如 "January", "February" 等 */
+        monthTitle.textContent = monthDate.toLocaleString("default", { month: "long" }) + " " + year;
+        calendarContainer.appendChild(monthTitle);
+        //continue;
+        let table = document.createElement("table");
+        calendarContainer.appendChild(table);
+
+        let thead = document.createElement("thead");
+        table.appendChild(thead);
+
+        let weekDays = ["日", "一", "二", "三", "四", "五", "六"];
+        let weekRow = document.createElement("tr");
+        thead.appendChild(weekRow);
+        
+        for (let i = 0; i < 7; i++) {
+          let th = document.createElement("th");
+          if (i === 0) {
+            th.classList.add("sunday");
+          }
+          th.textContent = weekDays[i];
+          weekRow.appendChild(th);
+        }
+        //continue;
+        let tbody = document.createElement("tbody");
+        table.appendChild(tbody);
+
+        let firstDayOfWeek = monthDate.getDay();
+        let daysInMonth = new Date(year, month + 1, 0).getDate();
+
+        let day = 1;
+        for (let week = 0; week < 6; week++) {
+          let tr = document.createElement("tr");
+          tbody.appendChild(tr);
+
+          for (let weekday = 0; weekday < 7; weekday++) {
+            let td = document.createElement("td");
+            if (weekday === 0) { td.classList.add("sunday"); }
+            if (week === 0 && weekday < firstDayOfWeek) {
+              td.textContent = "";
+            } else if (day <= daysInMonth) {
+              td.textContent = day;
+              day++;
+            }
+
+            tr.appendChild(td);
+          }
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>

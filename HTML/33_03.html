@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <table>
+    <input type="text" id="inputText">
+    <button onclick="addItem()">增加</button>
+    <button onclick="search()">查詢</button>
+    <button onclick="claerItem()">清空</button>
+    <button onclick="saveSet()">存儲集合到本地存儲</button>
+    <button onclick="retrieveSet()">從本地存儲中檢索集合</button>
+    <button onclick="sortSet(true)">正排序</button>
+    <button onclick="sortSet(false)">反排序</button>
+
+    <table id="setTable">
+        <thead>
+            <tr>
+                <th>索引</th>
+                <th>項目</th>
+                <th>DataType</th>
+                <th>刪除</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script>
+        var set =new Set();
+        function displaySet(sortedArray){
+            var tableBody=document.getElementById("setTable").getElementsByTagName("tbody")[0];
+            tableBody.innerHTML="";
+
+            let index=0;
+            let items=sortedArray||Array.from(set);
+
+            items.forEach(item=>{
+                var newRow=tableBody.insertRow();
+                var indexCell=newRow.insertCell(0);
+                var itemCell=newRow.insertCell(1);
+                var datatypeCell=newRow.insertCell(2);
+                var drleteCell=newRow.insertCell(3);
+
+                indexCell.innerHTML=index++;
+                itemCell.innerHTML=item;
+                datatypeCell.innerHTML=typeof item;
+                drleteCell.innerHTML="<button onlick=\"deleteItem('"+item+"')\">刪除</button>";
+            });
+        }
+        function addItem(){
+            var input=document.getElementById("inputText").value;
+            if(input==="")return;
+            if(!isNaN(input))input=Number(input);
+            set.add(input);
+            displaySet();
+            document.getElementById("inputText").value="";
+            document.getElementById("inputText").focus();
+        }
+
+        function search(){
+            var input=document.getElementById("inputText").value;
+            if(!isNaN(input))input=Number(input);
+            let exists=set.has(input);
+            alert(exists?"找到項目":"未找到項目");
+            displaySet();
+            document.getElementById("inputText").value="";
+            document.getElementById("inputText").focus();
+        }
+
+        function saveSet(){
+            localStorage.setItem('mySet',JSON.stringify(Array.from(set)));
+            console.log('Set saved to local storage');
+        }
+
+        function retrieveSet(){
+            var retrieveArray = JSON.parse(localStorage.getItem('mySet'));
+            set =new Set(retrieveArray);
+            console.log('Retrieved Set',set);
+            displaySet();
+        }
+        /*刪除指定項目*/
+        function deleteItem(item){
+            //alert('del');
+            console.log(typeof item);
+            item = JSON.parse(decodeURIComponent(item));
+            console.log(typeof item);
+            set.delete(item);
+            displaySet();
+        }
+        /*清空*/
+        function claerItem(){
+            set.clear();
+            displaySet();
+        }
+        //
+        function sortSet(acscending) {
+            let sortedArray=Array.from(set).sort((a,b)=>{
+                if(typeof a=== "number"&& typeof b === "number"){
+                    return acscending ? a-b:b-a;
+                }else{
+                    let aStr=String(a);
+                    let bStr=String(b);
+                    return acscending ? aStr.localeCompare(bStr):bStr.localeCompare(aStr);
+                }
+            });
+            displaySet(sortedArray);
+        }
+
+    </script>
+</body>
+</html>

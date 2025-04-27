@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>和AO老師快樂學HTML</title>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #cfe1fa5b;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #eeeaba30;
+        }
+
+        /* 自定義 summary 的外觀 */
+        summary {
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            user-select: none;
+        }
+
+        /* 自定義 details 標籤的邊框和 padding */
+        details {
+            margin-top: 10px;
+            padding: 10px;
+            border: 2px solid #007bff;
+            border-radius: 5px;
+        }
+
+        /* 展開的 details 內容的動畫 */
+        details[open] {
+            transition: all 0.5s ease-in-out;
+        }
+
+        /* 自定義 details 內部的內容樣式 */
+        details p {
+            margin-top: 10px;
+            font-size: 1em;
+            line-height: 1.5;
+        }
+
+        /* 鼠標懸停時改變 summary 的背景顏色 */
+        summary:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>和AO老師快樂學HTML</h1>
+    <!---=== HTML基本結構 ===-->
+    <details>
+        <summary>HTML基本結構</summary>
+        <table style="border: 1px;">
+            <tr>
+                <th>項目</th>
+                <th>範例</th>
+            </tr>
+            <tr>
+                <td>!+tab:我的第一支...</td>
+                <td><a href="00_00.html">00_00.html</a></td>
+            </tr>
+            <tr>
+                <td>HTML基本結構</td>
+                <td><a href="00_01.html">00_01.html</a></td>
+            </tr>
+            <tr>
+                <td>HTML基本結構:head</td>
+                <td><a href="00_02.html">00_02.html</a></td>
+            </tr>
+            <tr>
+                <td>HTML基本結構:head:Favicon</td>
+                <td><a href="00_03.html">00_03.html</a></td>
+            </tr>
+            <tr>
+                <td>HTML基本結構:lang</td>
+                <td><a href="00_04.html">00_04.html</a></td>
+            </tr>
+            <tr>
+                <td>HTML基本結構:網頁標題</td>
+                <td><a href="00_05.html">00_05.html</a></td>
+            </tr>
+            <tr>
+                <td>HTML基本結構:載入外部資源&lt;link></td>
+                <td><a href="00_06.html">00_06.html</a></td>
+            </tr>
+            <tr>
+                <td>內容安全政策 (CSP, Content Security Policy) </td>
+                <td><a href="00_90.html">00_90.html</a></td>
+            </tr>
+            <tr>
+                <td>網頁資訊&lt;meta>標籤</td>
+                <td><a href="00_91.html">00_91.html</a></td>
+            </tr>
+        </table>
+    </details>
+    <hr />
+    <!---=== 01 HTML基本語法 ===-->
+    <details>
+        <summary>HTML基本語法</summary>
+        <table style="border: 1px;">
+            <tr>
+                <th>項目</th>
+                <th>範例</th>
+            </tr>
+            <tr>
+                <td>HTML 常見tag</td>
+                <td><a href="01_90.html">01_90.html</a></td>
+            </tr>
+            <tr>
+                <td>HTML 標籤與架構</td>
+                <td><a href="01_02.html">01_02.html</a></td>
+            </tr>
+            <tr>
+                <td>HTML 使用空格、換行和特殊符號需要注意</td>
+                <td><a href="01_01.html">01_01.html</a></td>
+            </tr>
+            <tr>
+                <td>縮排與註解</td>
+                <td><a href="01_00.html">01_00.html</a></td>
+            </tr>
+            <tr>
+                <td>全域屬性的範例</td>
+                <td><a href="01_11.html">01_11.html</a></td>
+            </tr>
+            <tr>
+                <td>全域屬性的範例</td>
+                <td><a href="01_13.html">01_13.html</a></td>
+            </tr>
+            <tr>
+                <td>全域屬性的範例</td>
+                <td><a href="01_14.html">01_14.html</a></td>
+            </tr>
+            <tr>
+                <td>個別屬性</td>
+                <td><a href="01_15.html">01_15.html</a></td>
+            </tr>
+            <tr>
+                <td>個別屬性:清單和表格的屬性範例</td>
+                <td><a href="01_16.html">01_16.html</a></td>
+            </tr>
+            <tr>
+                <td>個別屬性:表單</td>
+                <td><a href="01_17.html">01_17.html</a></td>
+            </tr>
+            <tr>
+                <td>事件屬性
+                </td>
+                <td><a href="11_13.html">11_13.html</a></td>
+            </tr>
+            <tr>
+                <td>影像元素及觸發事件</td>
+                <td><a href="01_12.html">01_12.html</a></td>
+            </tr>
+        </table>
+    </details>
+    <hr />
+    <!---=== 11 文章段落 ===-->
+    <details>
+        <summary>文章段落</summary>
+        <table style="border: 1px;">
+            <tr>
+                <th>項目</th>
+                <th>範例</th>
+            </tr>
+            <tr>
+                <td>標題
+                </td>
+                <td><a href="11_01.html">11_01.html</a></td>
+            </tr>
+            <tr>
+                <td>段落
+                </td>
+                <td><a href="11_02.html">11_02.html</a></td>
+            </tr>
+        </table>
+    </details>
+    <hr />
+    <!---=== 12 文字樣式 ===-->
+    <details>
+        <summary>文字樣式</summary>
+        <table style="border: 1px;">
+            <tr>
+                <th>項目</th>
+                <th>範例</th>
+            </tr>
+            <tr>
+                <td><strong>文字樣式</strong>
+                </td>
+                <td><a href="12_01.html">12_01.html</a></td>
+            </tr>
+            <tr>
+                <td>預先格式化、程式碼內容
+                </td>
+                <td><a href="12_02.html">12_02.html</a></td>
+            </tr>
+            <tr>
+                <td>收折文字內容
+                </td>
+                <td><a href="12_03.html">12_03.html</a></td>
+            </tr>
+            <tr>
+                <td>標示注音
+                </td>
+                <td><a href="12_04.html">12_04.html</a></td>
+            </tr>
+            <tr>
+                <td>其他標示方式
+                </td>
+                <td><a href="12_05.html">12_05.html</a></td>
+            </tr>
+        </table>
+    </details>
+    <hr />
+    <!---=== 13 色彩表示法 ===-->
+    <details>
+        <summary>色彩表示法</summary>
+        <table style="border: 1px;">
+            <tr>
+                <th>項目</th>
+                <th>範例</th>
+            </tr>
+            <tr>
+                <td>色彩表示法</td>
+                <td><a href="13_01.html">13_01.html</a></td>
+            </tr>
+            <tr>
+                <td>色彩表示法</td>
+                <td><a href="13_02.html">13_02.html</a></td>
+            </tr>
+            <tr>
+                <td>調色盤</td>
+                <td><a href="13_99.html">13_99.html</a></td>
+            </tr>
+        </table>
+    </details>
+    <hr />
+    <!---=== 14 網址與路徑 ===-->
+    <details>
+        <summary>網址與路徑</summary>
+        <table style="border: 1px;">
+            <tr>
+                <th>項目</th>
+                <th>範例</th>
+            </tr>
+            <tr>
+                <td>網址與路徑
+                </td>
+                <td><a href="14_01.html">14_01.html</a></td>
+            </tr>
+        </table>
+    </details>
+    <hr />
+    
+</body>
+
+</html>

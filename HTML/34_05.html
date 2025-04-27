@@ -1,0 +1,43 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title></title>
+</head>
+
+<body>
+    <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+    <script>
+    //定義x軸的標簽數據,表示不同國家
+    const xValues =["Italy", "France", "Spain", "USA", "Argentina"];
+    //定義y軸的數據,表示各國的葡萄酒產量
+    const yValues = [55, 49, 44,24, 15];
+    //定義每個部分的顏色
+    const barColors = [
+        "#b91d47",// 義大利
+        "#00aba9", //法國
+        "#2b5797",// 西班牙
+        "#e8c3b9", //美國
+        "#1e7145" // 阿根廷
+        ];
+        //創建一個新的 Chart 實例
+        new Chart("myChart", {
+            type:"pie",//設定圖表型為圓餅圖
+            data: {
+                labels:xValues,//設定 x 軸的標篷
+                datasets: [{
+                    backgroundColor: barColors,//設定每個部分的背景顏色
+                    data:yValues //設定 y軸的數據
+                    }]
+                },
+                options: {
+                    legend:{display:false///不順示图例
+                        },
+                        title:{
+display:true,//顯示標題
+text: "World Wide Wine Production 2018"//設定標題
+}
+}
+});
+</script>
+</body>

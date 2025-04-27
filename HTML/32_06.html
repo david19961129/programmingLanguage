@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript BigInt 方法</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript BigInt 方法</h1>
+    <table>
+        <tr>
+            <th>方法</th>
+            <th>說明</th>
+            <th>範例</th>
+            <th>結果</th>
+        </tr>
+        <tr>
+            <td>toString()</td>
+            <td>將 BigInt 轉換為字串</td>
+            <td>bigint.toString()</td>
+            <td id="toStringResult"></td>
+        </tr>
+        <tr>
+            <td>toLocaleString()</td>
+            <td>返回以區域設定格式化的 BigInt 字串</td>
+            <td>bigint.toLocaleString()</td>
+            <td id="toLocaleStringResult"></td>
+        </tr>
+        <tr>
+            <td>valueOf()</td>
+            <td>返回 BigInt 的原始值</td>
+            <td>bigint.valueOf()</td>
+            <td id="valueOfResult"></td>
+        </tr>
+    </table>
+
+    <script>
+        var bigint = BigInt('12345678901234567890');
+
+        document.getElementById("toStringResult").textContent = bigint.toString();
+        document.getElementById("toLocaleStringResult").textContent = bigint.toLocaleString();
+        document.getElementById("valueOfResult").textContent = bigint.valueOf();
+    </script>
+</body>
+</html>

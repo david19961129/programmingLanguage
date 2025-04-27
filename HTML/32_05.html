@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript 數字方法</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript 數字方法</h1>
+    <table>
+        <tr>
+            <th>方法</th>
+            <th>說明</th>
+            <th>範例</th>
+            <th>結果</th>
+        </tr>
+        <tr>
+            <td>toFixed(digits)</td>
+            <td>將數字格式化為指定小數位數</td>
+            <td>num.toFixed(2)</td>
+            <td id="toFixedResult"></td>
+        </tr>
+        <tr>
+            <td>toPrecision(digits)</td>
+            <td>將數字格式化為指定有效位數</td>
+            <td>num.toPrecision(4)</td>
+            <td id="toPrecisionResult"></td>
+        </tr>
+        <tr>
+            <td>toString(radix)</td>
+            <td>將數字轉換為指定進制的字串</td>
+            <td>num.toString(16)</td>
+            <td id="toStringResult"></td>
+        </tr>
+        <tr>
+            <td>parseInt(string, radix)</td>
+            <td>將字串轉換為整數</td>
+            <td>parseInt("123", 10)</td>
+            <td id="parseIntResult"></td>
+        </tr>
+        <tr>
+            <td>parseFloat(string)</td>
+            <td>將字串轉換為浮點數</td>
+            <td>parseFloat("3.14")</td>
+            <td id="parseFloatResult"></td>
+        </tr>
+
+        <tr>
+            <td>toExponential(digits)</td>
+            <td>將數字格式化為指定位數的指數表示法</td>
+            <td>num.toExponential(2)</td>
+            <td id="toExponentialResult"></td>
+        </tr>
+        
+        <tr>
+            <td>valueOf()</td>
+            <td>返回數字的原始值</td>
+            <td>num.valueOf()</td>
+            <td id="valueOfResult"></td>
+        </tr>
+        <tr>
+            <td>isFinite()</td>
+            <td>檢查值是否為有限數字</td>
+            <td>Number.isFinite(10)</td>
+            <td id="valueisFinite"></td>
+        </tr>
+        <tr>
+            <td>isFinite()</td>
+            <td>檢查值是否為有限數字</td>
+            <td>Number.isFinite(10/0)</td>
+            <td id="valueisFinite1"></td>
+        </tr>
+    </table>
+
+    <script>
+        var num = 3.14159;
+
+        document.getElementById("toFixedResult").textContent = num.toFixed(2);
+        document.getElementById("toExponentialResult").textContent = num.toExponential(2);
+        document.getElementById("toPrecisionResult").textContent = num.toPrecision(4);
+        document.getElementById("valueOfResult").textContent = num.valueOf();
+        let n1=256;
+        document.getElementById("toStringResult").textContent = n1.toString(16);
+        document.getElementById("parseIntResult").textContent =  parseInt("123", 10);
+        document.getElementById("parseFloatResult").textContent = parseFloat("3.14");
+        document.getElementById("valueisFinite").textContent = Number.isFinite(10);
+        document.getElementById("valueisFinite1").textContent = Number.isFinite(10/0);
+        
+    
+        
+       
+    </script>
+</body>
+</html>

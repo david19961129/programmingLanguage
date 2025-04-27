@@ -1,0 +1,156 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map 操作示例</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="inputKey" placeholder="Key">
+    <input type="text" id="inputValue" placeholder="Value">
+    <button onclick="addItem()">增加</button>
+    <button onclick="search()">查詢</button>
+    <button onclick="clearItem()">清空</button>
+    <button onclick="saveMap()">存儲 Map 到本地存儲</button>
+    <button onclick="retrieveMap()">從本地存儲中檢索 Map</button>
+    <button onclick="sortMap('key', true)">Key 正排序</button>
+    <button onclick="sortMap('key', false)">Key 反排序</button>
+    <button onclick="sortMap('value', true)">Value 正排序</button>
+    <button onclick="sortMap('value', false)">Value 反排序</button>
+    <button onclick="search()">查詢key</button>
+    <button onclick="searchByValue()">查詢value</button>
+    <table id="mapTable">
+        <thead>
+            <tr>
+                <th>索引</th>
+                <th>Key</th>
+                <th>Value</th>
+                <th>DataType</th>
+                <th>刪除</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <script>
+        var map =new Map();
+        function displayMap(sortedArray){
+            var tableBody=document.getElementById("mapTable").getElementsByTagName("tbody")[0];
+            tableBody.innerHTML="";
+
+            let index=0;
+            let items=sortedArray||Array.from(map.entries());
+
+            items.forEach(([key,value])=>{
+                var newRow=tableBody.insertRow();
+                var indexCell=newRow.insertCell(0);
+                var keyCell=newRow.insertCell(1);
+                var valueCell=newRow.insertCell(2);
+                var datatypeCell=newRow.insertCell(3);
+                var drleteCell=newRow.insertCell(4);
+
+                indexCell.innerHTML=index++;
+                keyCell.innerHTML=key;
+                valueCell.innerHTML=value;
+                datatypeCell.innerHTML=typeof value;
+                drleteCell.innerHTML="<button onclick=\"deleteItem('"+key+"')\">刪除</button>";
+            });
+            
+        }
+        function addItem(){
+            var key=document.getElementById("inputKey").value;
+            var value=document.getElementById("inputValue").value;
+            if(key===""||value==="")return;
+            if(!isNaN(value))value=Number(value);
+            map.set(key,value);
+            displayMap();
+            document.getElementById("inputKey").value="";
+            document.getElementById("inputValue").value="";
+            document.getElementById("inputKey").focus();
+        }
+        function saveMap(){
+            localStorage.setItem('myMap',JSON.stringify(Array.from(map.entries())));
+            console.log('Map saved to local storage');
+        }
+
+        function retrieveMap(){
+            var retrieveArray = JSON.parse(localStorage.getItem('myMap'));
+            map =new Map(retrieveArray);
+            console.log('Retrieved Map',map);
+            displaySet();
+        }
+
+        function deleteItem(key){
+            map.delete(key);
+            displaySet();
+        }
+        /*清空*/
+        function claerItem(){
+            map.clear();
+            displayMap();
+        }
+        
+        function search(){
+            var key=document.getElementById("inputKey").value;
+            let exists=map.has(key);
+            alert(exists?"找到項目":"未找到項目");
+            displaySet();
+            document.getElementById("inputKey").value="";
+            document.getElementById("inputValue").value="";
+            document.getElementById("inputKey").focus();
+        }
+
+        function searchByValue(){
+            var key=document.getElementById("inputkey").value;
+            if(!isNaN(value))value=Number(value);
+            let exists=false;
+            for(let val of map.values){
+                if(val===value){
+                    exists=true;
+                    break;
+                }
+            }
+            alert(exists?"找到項目":"未找到項目");
+            displaySet();
+            document.getElementById("inputKey").value="";
+            document.getElementById("inputValue").value="";
+            document.getElementById("inputKey").focus();
+        }
+
+        function sortMap(by, ascending) {
+            let sortedArray = Array.from(map.entries()).sort((a, b) => {
+                if (by === 'key') {
+                    let keyA = a[0], keyB = b[0];
+                    if (typeof keyA === "number" && typeof keyB === "number") {
+                        return ascending ? keyA - keyB : keyB - keyA;
+                    } else {
+                        let keyAStr = String(keyA);
+                        let keyBStr = String(keyB);
+                        return ascending ? keyAStr.localeCompare(keyBStr) : keyBStr.localeCompare(keyAStr);
+                    }
+                } else if (by === 'value') {
+                    let valueA = a[1], valueB = b[1];
+                    if (typeof valueA === "number" && typeof valueB === "number") {
+                        return ascending ? valueA - valueB : valueB - valueA;
+                    } else {
+                        let valueAStr = String(valueA);
+                        let valueBStr = String(valueB);
+                        return ascending ? valueAStr.localeCompare(valueBStr) : valueBStr.localeCompare(valueAStr);
+                    }
+                }
+            });
+            displayMap(sortedArray);
+        }
+    </script>
