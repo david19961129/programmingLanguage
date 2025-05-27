@@ -3,7 +3,7 @@
 namespace NEDDY
 {
     /// <summary>
-    /// 狀態機
+    /// 狀態確認腳本
     /// </summary>
     public class StateMachine : MonoBehaviour
     {
