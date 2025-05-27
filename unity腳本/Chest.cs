@@ -3,7 +3,7 @@
 namespace NEDDY
 {
     /// <summary>
-    /// 寶箱
+    /// 寶箱互動腳本
     /// </summary>
     public class Chest : MonoBehaviour, IInteraction
     {
