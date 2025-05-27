@@ -4,17 +4,15 @@ using UnityEngine;
 namespace NEDDY
 {
     /// <summary>
-    /// 迷霧場景淡入淡出管理器
+    /// 淡入淡出(協同程序)
     /// </summary>
+    /// <param name="group">要淡入的群組元件</param>
+    /// <param name="fadeIn">是否淡入</param>
+    /// <returns></returns>
     public class FadeManager : MonoBehaviour
     {
         private WaitForSeconds waitFade => new WaitForSeconds(0.05f);
-        /// <summary>
-        /// 淡入淡出(協同程序)
-        /// </summary>
-        /// <param name="group">要淡入的群組元件</param>
-        /// <param name="fadeIn">是否淡入</param>
-        /// <returns></returns>
+        
         public IEnumerable Fade(CanvasGroup group, bool fadeIn = true)
         {
             yield return new WaitForSeconds(1);
