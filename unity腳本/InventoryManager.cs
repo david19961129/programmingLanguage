@@ -3,6 +3,7 @@
 namespace NEDDY
 {
     /// <summary>
+    /// 背包腳本設定[背包/父物件>口袋/子物件]
     /// 背包列表
     /// </summary>
     public class InventoryManager : MonoBehaviour
