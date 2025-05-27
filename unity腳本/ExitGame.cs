@@ -2,6 +2,9 @@
 
 namespace NEDDY
 {
+    /// <summary>
+    /// 遊戲退出腳本
+    /// </summary>
     public class ExitGame : MonoBehaviour
     {
         public void QuitGame()
