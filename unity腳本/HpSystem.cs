@@ -3,6 +3,9 @@
 
 namespace NEDDY
 {
+        /// <summary>
+        /// 血量觸發死亡腳本
+        /// </summary>
 public class HpSystem : MonoBehaviour , IDamage
 {
         [SerializeField, Header("血量資料")]
