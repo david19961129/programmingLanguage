@@ -4,7 +4,7 @@ using UnityEngine;
 namespace NEDDY
 {
     /// <summary>
-    /// 淡入淡出管理器
+    /// 迷霧場景淡入淡出管理器
     /// </summary>
     public class FadeManager : MonoBehaviour
     {
