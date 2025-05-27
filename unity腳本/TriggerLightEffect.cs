@@ -3,6 +3,10 @@
 
 namespace NEDDY
 {
+    /// <summary>
+    /// 觸發場景特效與範圍腳本，
+    /// <returns></returns>
+    
     public class TriggerLightEffect : MonoBehaviour
     {
         public GameObject 全域空間_場景特效; // 光源特效对象
