@@ -4,8 +4,11 @@ using UnityEngine.UI;
 namespace NEDDY
 {
     /// <summary>
-    /// 道具掛載
+    /// 背包腳本設定[背包/父物件>口袋/子物件>]
+    /// 道具設定對應UI圖片、名稱、物品描述
+    /// 確認各個口袋/子物件是否佔用狀態
     /// </summary>
+    
     public class Item : MonoBehaviour
     {
         public string itemName;   // 道具名稱
