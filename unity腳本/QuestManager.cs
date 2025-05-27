@@ -1,6 +1,10 @@
 ﻿using UnityEngine;
 using Fungus;
 
+/// <summary>
+/// NPC任務項目進度追蹤腳本
+/// </summary>
+
 public class QuestManager : MonoBehaviour
 {
     public GameObject 信封; // 信封的游戏对象
