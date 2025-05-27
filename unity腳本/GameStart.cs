@@ -4,6 +4,9 @@ using UnityEngine.SceneManagement;
 
 namespace NEDDY
 {
+    /// <summary>
+    /// 遊戲初始畫面腳本
+    /// </summary>
     public class GameStart : MonoBehaviour
     {
         public Flowchart flowchart;
