@@ -3,7 +3,7 @@
 namespace NEDDY.Tools
 {
     /// <summary>
-    /// 輸出系統
+    /// 輸出系統工具腳本
     /// </summary>
     public class LogSystem : MonoBehaviour
     {
