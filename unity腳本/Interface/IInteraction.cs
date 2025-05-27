@@ -3,7 +3,7 @@
 namespace NEDDY
 {
     /// <summary>
-    /// 介面:互動
+    /// 介面:互動腳本
     /// </summary>
     interface IInteraction
     {
