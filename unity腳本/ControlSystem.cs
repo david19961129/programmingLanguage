@@ -2,6 +2,11 @@
 
 namespace NEDDY
 {
+    /// <summary>
+    /// 玩家移動與互動腳本、按1才可移動
+    /// 玩家XYZ軸移動、觸發NPC事件停止移動至對話結束
+    /// NPC任務物件接收用腳本[按E接受物件、物件移至為玩家子物件存放]
+    /// </summary>
     public class ControlSystem : MonoBehaviour
     {
         [SerializeField, Header("移動速度"), Tooltip("用於調整速度"), Range(0, 10)]
