@@ -3,6 +3,11 @@ using UnityEngine;
 
 namespace NEDDY
 {
+    /// <summary>
+    /// 小怪機制腳本
+    /// 小怪移動範圍、速度、待機時間
+    /// 小怪觸碰玩家觸發移動陷阱
+    /// </summary>
     public class Wander : StateBase //繼承狀態基底類別
     {
         [SerializeField, Header("左邊界")]
