@@ -4,7 +4,10 @@ using UnityEngine.UI;
 namespace NEDDY
 {
     /// <summary>
-    /// 口袋
+    /// 背包腳本設定[背包/父物件>口袋/子物件>]
+    /// 口袋/子物件、
+    /// 確認各個口袋/子物件是否佔用狀態
+    /// 確認口袋/子物件 使用的UI圖片正確
     /// </summary>
     [System.Serializable]
     public class InventorySlot : MonoBehaviour
