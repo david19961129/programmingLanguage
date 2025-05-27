@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 namespace NEDDY
 {
     /// <summary>
-    /// 遊戲初始畫面腳本
+    /// 遊戲初始畫面腳本、加遊戲初始對話框顯示
     /// </summary>
     public class GameStart : MonoBehaviour
     {
